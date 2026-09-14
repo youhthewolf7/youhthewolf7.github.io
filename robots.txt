@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://youhthewolf.github.io/sitemap.xml
+Sitemap: https://youhthewolf7.github.io/sitemap.xml
