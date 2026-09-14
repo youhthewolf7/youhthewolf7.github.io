@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Youh_The_Wolf_7 | Professional Warzone Player</title>
+    <title>Youh_The_Wolf_7 | Competitive Call of Duty Player</title>
 
-    <meta
-        name="description"
-        content="Sitio oficial de Youh_The_Wolf_7, Yoel Díaz. Jugador competitivo de Call of Duty: Warzone representando a Uruguay."
-    >
+    <meta name="description" content="Youh_The_Wolf_7 — Jugador competitivo de Call of Duty: Warzone de Uruguay. Campeón Sudamericano Regional, MVP y competidor internacional.">
 
-    <meta
-        name="keywords"
-        content="Youh The Wolf 7, Yoel Diaz, Warzone, Call of Duty, Uruguay, esports, Z League, Challengers, WSOW"
-    >
+    <meta name="keywords" content="Youh The Wolf 7, Youh_The_Wolf_7, Yoel Diaz, Call of Duty, Warzone, Uruguay, esports, competitivo, WSOW, Z League">
 
-    <meta name="author" content="Yoel Díaz">
+    <meta name="author" content="Youh_The_Wolf_7">
+
+    <meta property="og:title" content="Youh_The_Wolf_7 | The Wolf">
+    <meta property="og:description" content="Competitive Call of Duty: Warzone Player — Uruguay 🇺🇾">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
 
-        /* ==================================================
+        /* =========================================================
            RESET
-        ================================================== */
+        ========================================================= */
 
         * {
             margin: 0;
@@ -38,37 +39,43 @@
 
         body {
             background: #050505;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
         }
 
 
-        /* ==================================================
+        /* =========================================================
            VARIABLES
-        ================================================== */
+        ========================================================= */
 
         :root {
-            --red: #ff1616;
-            --red-dark: #b80000;
-            --black: #050505;
-            --black2: #0b0b0b;
-            --gray: #999;
-            --border: rgba(255,255,255,0.08);
+            --red: #e50914;
+            --red-light: #ff2430;
+            --dark: #050505;
+            --dark-2: #0b0b0b;
+            --dark-3: #111111;
+            --gray: #a4a4a4;
+            --border: rgba(255,255,255,0.09);
         }
 
 
-        /* ==================================================
+        /* =========================================================
            SCROLLBAR
-        ================================================== */
+        ========================================================= */
 
         ::-webkit-scrollbar {
-            width: 7px;
+            width: 8px;
         }
 
         ::-webkit-scrollbar-track {
@@ -80,20 +87,16 @@
         }
 
 
-        /* ==================================================
+        /* =========================================================
            NAVBAR
-        ================================================== */
+        ========================================================= */
 
         nav {
-
             position: fixed;
-
             top: 0;
             left: 0;
-
             width: 100%;
             height: 76px;
-
             z-index: 1000;
 
             display: flex;
@@ -102,78 +105,840 @@
 
             padding: 0 6%;
 
-            background: rgba(3,3,3,0.88);
+            background: rgba(5,5,5,0.72);
+            backdrop-filter: blur(16px);
 
-            backdrop-filter: blur(15px);
-
-            border-bottom: 1px solid rgba(255,22,22,0.20);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
 
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
 
-        .nav-logo img {
-
-            width: 90px;
-            max-height: 55px;
-
-            object-fit: contain;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 2px;
         }
 
+        .nav-logo span {
+            color: var(--red);
+        }
 
         .nav-links {
-
             display: flex;
-            gap: 32px;
+            gap: 34px;
+        }
 
-            list-style: none;
+        .nav-links a {
+            color: #d5d5d5;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
         }
 
 
-        .nav-links a {
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 8% 80px;
+
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.94) 0%,
+                    rgba(0,0,0,0.72) 42%,
+                    rgba(0,0,0,0.35) 75%,
+                    rgba(0,0,0,0.8) 100%
+                ),
+                linear-gradient(
+                    0deg,
+                    #050505 0%,
+                    transparent 35%,
+                    rgba(0,0,0,0.2) 100%
+                ),
+                url("fondo wolf.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: -250px;
+            top: 20%;
+
+            background: rgba(229,9,20,0.18);
+            filter: blur(130px);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero-logo {
+            width: 145px;
+            margin-bottom: 28px;
+
+            filter:
+                drop-shadow(0 0 20px rgba(229,9,20,0.45))
+                drop-shadow(0 0 50px rgba(229,9,20,0.15));
+
+            animation: logoFloat 5s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 16px;
+
+            color: #d7d7d7;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .hero-kicker::before {
+            content: "";
+            width: 32px;
+            height: 2px;
+            background: var(--red);
+        }
+
+        .hero h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(70px, 10vw, 145px);
+            font-weight: 900;
+            line-height: 0.82;
+            letter-spacing: -3px;
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            display: block;
+            color: var(--red);
+
+            text-shadow:
+                0 0 25px rgba(229,9,20,0.25);
+        }
+
+        .hero-description {
+            max-width: 620px;
+
+            color: #c5c5c5;
+            font-size: 17px;
+            line-height: 1.8;
+
+            margin-bottom: 32px;
+        }
+
+        .hero-location {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            margin-bottom: 35px;
+
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-location span {
+            color: var(--red);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-width: 180px;
+            height: 54px;
+
+            padding: 0 28px;
 
             font-size: 12px;
-            font-weight: 900;
-
-            letter-spacing: 1.5px;
-
+            font-weight: 800;
+            letter-spacing: 2px;
             text-transform: uppercase;
+
+            border: 1px solid var(--red);
 
             transition: 0.3s;
         }
 
+        .btn-primary {
+            background: var(--red);
+            color: white;
+        }
 
-        .nav-links a:hover {
+        .btn-primary:hover {
+            background: var(--red-light);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(229,9,20,0.3);
+        }
 
+        .btn-outline {
+            background: rgba(0,0,0,0.3);
+            color: white;
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--red);
             color: var(--red);
-
+            transform: translateY(-3px);
         }
 
 
-        /* ==================================================
-           HERO
-        ================================================== */
+        /* =========================================================
+           HERO SIDE INFO
+        ========================================================= */
 
-        .hero {
-
-            min-height: 100vh;
-
-            position: relative;
+        .hero-side {
+            position: absolute;
+            right: 5%;
+            bottom: 70px;
 
             display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
 
+            color: rgba(255,255,255,0.45);
+
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-side strong {
+            color: white;
+            font-size: 18px;
+        }
+
+
+        /* =========================================================
+           SECTION
+        ========================================================= */
+
+        section {
+            position: relative;
+            padding: 120px 8%;
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 12px;
+
+            color: var(--red);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .section-label::before {
+            content: "";
+            width: 28px;
+            height: 2px;
+            background: var(--red);
+        }
+
+        .section-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(45px, 6vw, 80px);
+            font-weight: 900;
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+
+            margin-bottom: 50px;
+        }
+
+
+        /* =========================================================
+           STATS
+        ========================================================= */
+
+        .stats {
+            background: #080808;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        .stat {
+            min-height: 125px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 20px 30px;
+
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 52px;
+            font-weight: 900;
+            line-height: 1;
+
+            color: white;
+        }
+
+        .stat-number.red {
+            color: var(--red);
+        }
+
+        .stat-label {
+            margin-top: 8px;
+
+            color: #777;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about {
+            background: #050505;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text {
+            color: #aaa;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .about-text p {
+            margin-bottom: 22px;
+        }
+
+        .about-text strong {
+            color: white;
+        }
+
+        .about-highlight {
+            position: relative;
+
+            padding: 45px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(229,9,20,0.12),
+                    rgba(255,255,255,0.02)
+                );
+
+            border: 1px solid rgba(229,9,20,0.25);
+        }
+
+        .about-highlight::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 5px;
+            height: 100%;
+
+            background: var(--red);
+        }
+
+        .about-highlight h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 0.95;
+
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .about-highlight h3 span {
+            color: var(--red);
+        }
+
+        .about-highlight p {
+            color: #999;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           TIMELINE
+        ========================================================= */
+
+        .timeline-section {
+            background: #080808;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+
+            width: 1px;
+            height: 100%;
+
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                var(--red),
+                var(--red),
+                transparent
+            );
+        }
+
+        .timeline-item {
+            position: relative;
+
+            width: 50%;
+            padding: 0 50px 65px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+
+            width: 12px;
+            height: 12px;
+
+            background: var(--red);
+            border-radius: 50%;
+
+            box-shadow: 0 0 0 6px rgba(229,9,20,0.12);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -6px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -6px;
+        }
+
+        .timeline-year {
+            color: var(--red);
+
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .timeline-item h3 {
+            margin: 7px 0 10px;
+
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 31px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+        .timeline-item p {
+            color: #777;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           ACHIEVEMENTS
+        ========================================================= */
+
+        .achievements {
+            background: #050505;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .achievement {
+            position: relative;
+
+            min-height: 250px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            padding: 30px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151515,
+                    #080808
+                );
+
+            border: 1px solid var(--border);
+
+            transition: 0.4s;
+        }
+
+        .achievement::before {
+            content: "";
+            position: absolute;
+
+            width: 160px;
+            height: 160px;
+
+            top: -70px;
+            right: -70px;
+
+            background: rgba(229,9,20,0.15);
+
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .achievement:hover {
+            transform: translateY(-8px);
+            border-color: rgba(229,9,20,0.6);
+        }
+
+        .achievement-number {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 60px;
+            font-weight: 900;
+
+            color: rgba(255,255,255,0.04);
+        }
+
+        .achievement-icon {
+            position: relative;
+
+            color: var(--red);
+
+            font-size: 32px;
+
+            margin-bottom: auto;
+        }
+
+        .achievement h3 {
+            position: relative;
+
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 27px;
+            font-weight: 900;
+
+            text-transform: uppercase;
+        }
+
+        .achievement p {
+            position: relative;
+
+            margin-top: 6px;
+
+            color: #777;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           HIGHLIGHTS
+        ========================================================= */
+
+        .highlights {
+            background: #080808;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .highlight {
+            position: relative;
+            height: 300px;
+
+            display: flex;
             align-items: center;
             justify-content: center;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(229,9,20,0.18),
+                    #080808 65%
+                );
+
+            border: 1px solid var(--border);
+
+            transition: 0.4s;
+        }
+
+        .highlight:hover {
+            border-color: var(--red);
+            transform: translateY(-5px);
+        }
+
+        .play {
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 50%;
+
+            font-size: 23px;
+
+            background: rgba(0,0,0,0.5);
+
+            transition: 0.3s;
+        }
+
+        .highlight:hover .play {
+            background: var(--red);
+            border-color: var(--red);
+            transform: scale(1.1);
+        }
+
+        .highlight-title {
+            position: absolute;
+            bottom: 20px;
+            left: 22px;
+
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 25px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+        .highlight-label {
+            position: absolute;
+            top: 20px;
+            left: 22px;
+
+            color: var(--red);
+
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           SPONSORS
+        ========================================================= */
+
+        .sponsors {
+            background: #050505;
+        }
+
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .sponsor {
+            min-height: 180px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #090909;
+
+            border: 1px solid var(--border);
+
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 45px;
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            transition: 0.3s;
+        }
+
+        .sponsor:hover {
+            border-color: var(--red);
+            transform: translateY(-5px);
+        }
+
+        .sponsor span {
+            color: var(--red);
+        }
+
+
+        /* =========================================================
+           TWITCH
+        ========================================================= */
+
+        .twitch {
+            position: relative;
 
             text-align: center;
 
             overflow: hidden;
 
             background:
+                radial-gradient(
+                    circle at center,
+                    rgba(229,9,20,0.18),
+                    #050505 55%
+                );
+        }
 
+        .twitch-content {
+            position: relative;
+            z-index: 2;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .twitch h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(55px, 8vw, 95px);
+            font-weight: 900;
+            line-height: 0.9;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .twitch h2 span {
+            color: var(--red);
+        }
+
+        .twitch p {
+            color: #999;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================================================
+           FINAL STATEMENT
+        ========================================================= */
+
+        .final {
+            min-height: 65vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
                 linear-gradient(
-                    rgba(0,0,0,0.82),
-                    rgba(0,0,0,0.94)
+                    rgba(0,0,0,0.8),
+                    rgba(0,0,0,0.95)
                 ),
-
                 url("fondo wolf.jpg");
 
             background-size: cover;
@@ -181,1436 +946,328 @@
             background-attachment: fixed;
         }
 
-
-        .hero::before {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            background:
-
-                radial-gradient(
-                    circle at center,
-                    rgba(255,0,0,0.12),
-                    transparent 45%
-                );
-
-            pointer-events: none;
-        }
-
-
-        .hero::after {
-
-            content: "";
-
-            position: absolute;
-
-            bottom: 0;
-            left: 0;
-
-            width: 100%;
-            height: 180px;
-
-            background:
-
-                linear-gradient(
-                    transparent,
-                    #050505
-                );
-
-            pointer-events: none;
-        }
-
-
-        .hero-content {
-
-            position: relative;
-
-            z-index: 5;
-
+        .final-content {
             max-width: 1000px;
-
-            padding: 130px 20px 100px;
-
-            animation: heroIn 1.2s ease;
         }
 
-
-        .hero-logo {
-
-            width: 190px;
-
-            max-width: 55vw;
-
-            margin-bottom: 28px;
-
-            filter:
-
-                drop-shadow(
-                    0 0 30px rgba(255,0,0,0.35)
-                );
-
-            animation: wolfPulse 4s infinite ease-in-out;
-        }
-
-
-        .hero-small {
-
+        .final-small {
             color: var(--red);
 
-            font-size: 13px;
-
-            font-weight: 900;
-
+            font-size: 12px;
+            font-weight: 800;
             letter-spacing: 5px;
-
-            margin-bottom: 18px;
-
             text-transform: uppercase;
-        }
-
-
-        .hero h1 {
-
-            font-size: clamp(
-                42px,
-                8vw,
-                95px
-            );
-
-            line-height: 0.9;
-
-            font-weight: 1000;
-
-            letter-spacing: -4px;
-
-            text-transform: uppercase;
-        }
-
-
-        .hero h1 span {
-
-            color: var(--red);
-
-            display: block;
-        }
-
-
-        .hero-subtitle {
-
-            margin-top: 30px;
-
-            color: #ccc;
-
-            font-size: clamp(
-                14px,
-                2vw,
-                20px
-            );
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-        }
-
-
-        .country {
-
-            margin-top: 14px;
-
-            font-size: 18px;
-
-            font-weight: bold;
-        }
-
-
-        /* ==================================================
-           BUTTONS
-        ================================================== */
-
-        .hero-buttons {
-
-            margin-top: 40px;
-
-            display: flex;
-
-            justify-content: center;
-
-            gap: 15px;
-
-            flex-wrap: wrap;
-        }
-
-
-        .btn {
-
-            display: inline-block;
-
-            padding: 16px 30px;
-
-            border-radius: 3px;
-
-            font-size: 12px;
-
-            font-weight: 900;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-
-            transition: 0.3s;
-        }
-
-
-        .btn-red {
-
-            background: var(--red);
-
-            color: white;
-
-            box-shadow:
-                0 0 30px rgba(255,0,0,0.18);
-        }
-
-
-        .btn-red:hover {
-
-            background: #ff2929;
-
-            transform: translateY(-4px);
-
-            box-shadow:
-                0 12px 35px rgba(255,0,0,0.25);
-        }
-
-
-        .btn-outline {
-
-            border: 1px solid rgba(255,255,255,0.4);
-
-            color: white;
-        }
-
-
-        .btn-outline:hover {
-
-            background: white;
-
-            color: black;
-
-            transform: translateY(-4px);
-        }
-
-
-        /* ==================================================
-           SECTION
-        ================================================== */
-
-        section {
-
-            padding: 110px 7%;
-        }
-
-
-        .section-header {
-
-            text-align: center;
-
-            margin-bottom: 65px;
-        }
-
-
-        .section-header small {
-
-            color: var(--red);
-
-            font-size: 11px;
-
-            font-weight: 900;
-
-            letter-spacing: 4px;
-
-            text-transform: uppercase;
-        }
-
-
-        .section-header h2 {
-
-            margin-top: 10px;
-
-            font-size: clamp(
-                35px,
-                5vw,
-                60px
-            );
-
-            font-weight: 1000;
-
-            text-transform: uppercase;
-
-            letter-spacing: -2px;
-        }
-
-
-        .section-header h2 span {
-
-            color: var(--red);
-        }
-
-
-        .section-line {
-
-            width: 65px;
-
-            height: 4px;
-
-            margin: 20px auto 0;
-
-            background: var(--red);
-        }
-
-
-        /* ==================================================
-           COMPETITIVE RECORD
-        ================================================== */
-
-        .record {
-
-            background: #070707;
-
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-
-        .record-grid {
-
-            max-width: 1200px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(5, 1fr);
-
-            gap: 12px;
-        }
-
-
-        .record-card {
-
-            background: #0d0d0d;
-
-            border: 1px solid var(--border);
-
-            padding: 35px 15px;
-
-            text-align: center;
-
-            transition: 0.3s;
-        }
-
-
-        .record-card:hover {
-
-            transform: translateY(-6px);
-
-            border-color:
-                rgba(255,22,22,0.5);
-        }
-
-
-        .record-number {
-
-            color: var(--red);
-
-            font-size: 36px;
-
-            font-weight: 1000;
-        }
-
-
-        .record-label {
-
-            margin-top: 10px;
-
-            color: #888;
-
-            font-size: 10px;
-
-            font-weight: bold;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-        }
-
-
-        /* ==================================================
-           THE WOLF
-        ================================================== */
-
-        .wolf-section {
-
-            background: #050505;
-        }
-
-
-        .wolf-content {
-
-            max-width: 950px;
-
-            margin: auto;
-
-            text-align: center;
-        }
-
-
-        .wolf-content p {
-
-            color: #bbb;
-
-            font-size: 19px;
-
-            line-height: 1.9;
-
-            margin-bottom: 25px;
-        }
-
-
-        .wolf-quote {
-
-            margin: 55px auto;
-
-            padding: 45px 30px;
-
-            max-width: 850px;
-
-            border-top: 1px solid rgba(255,22,22,0.3);
-
-            border-bottom: 1px solid rgba(255,22,22,0.3);
-
-            background:
-
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(255,0,0,0.04),
-                    transparent
-                );
-        }
-
-
-        .wolf-quote h3 {
-
-            font-size: clamp(
-                28px,
-                5vw,
-                55px
-            );
-
-            font-weight: 1000;
-
-            line-height: 1.05;
-
-            text-transform: uppercase;
-        }
-
-
-        .wolf-quote span {
-
-            color: var(--red);
-        }
-
-
-        /* ==================================================
-           TIMELINE
-        ================================================== */
-
-        .timeline-section {
-
-            background: #080808;
-        }
-
-
-        .timeline {
-
-            max-width: 900px;
-
-            margin: auto;
-
-            position: relative;
-        }
-
-
-        .timeline::before {
-
-            content: "";
-
-            position: absolute;
-
-            left: 50%;
-
-            top: 0;
-            bottom: 0;
-
-            width: 2px;
-
-            background:
-                linear-gradient(
-                    var(--red),
-                    rgba(255,22,22,0.05)
-                );
-        }
-
-
-        .timeline-item {
-
-            width: 50%;
-
-            padding: 20px 45px;
-
-            position: relative;
-        }
-
-
-        .timeline-item:nth-child(even) {
-
-            margin-left: 50%;
-        }
-
-
-        .timeline-dot {
-
-            position: absolute;
-
-            top: 28px;
-
-            width: 13px;
-            height: 13px;
-
-            background: var(--red);
-
-            border-radius: 50%;
-
-            box-shadow:
-                0 0 20px rgba(255,0,0,0.6);
-        }
-
-
-        .timeline-item:nth-child(odd)
-        .timeline-dot {
-
-            right: -7px;
-        }
-
-
-        .timeline-item:nth-child(even)
-        .timeline-dot {
-
-            left: -7px;
-        }
-
-
-        .timeline-year {
-
-            color: var(--red);
-
-            font-size: 12px;
-
-            font-weight: 900;
-
-            letter-spacing: 3px;
-        }
-
-
-        .timeline-item h3 {
-
-            margin-top: 8px;
-
-            font-size: 22px;
-
-            text-transform: uppercase;
-        }
-
-
-        .timeline-item p {
-
-            margin-top: 10px;
-
-            color: #888;
-
-            line-height: 1.6;
-        }
-
-
-        /* ==================================================
-           ACHIEVEMENTS
-        ================================================== */
-
-        .achievements {
-
-            background: #050505;
-        }
-
-
-        .achievements-grid {
-
-            max-width: 1100px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 20px;
-        }
-
-
-        .achievement {
-
-            position: relative;
-
-            padding: 38px;
-
-            background: #0c0c0c;
-
-            border: 1px solid var(--border);
-
-            overflow: hidden;
-
-            transition: 0.3s;
-        }
-
-
-        .achievement:hover {
-
-            transform: translateY(-6px);
-
-            border-color:
-                rgba(255,22,22,0.5);
-        }
-
-
-        .achievement::before {
-
-            content: "";
-
-            position: absolute;
-
-            left: 0;
-            top: 0;
-
-            width: 4px;
-            height: 100%;
-
-            background: var(--red);
-        }
-
-
-        .achievement-icon {
-
-            font-size: 35px;
 
             margin-bottom: 20px;
         }
 
-
-        .achievement h3 {
-
-            font-size: 21px;
-
-            text-transform: uppercase;
-        }
-
-
-        .achievement p {
-
-            color: #888;
-
-            margin-top: 12px;
-
-            line-height: 1.7;
-        }
-
-
-        /* ==================================================
-           HIGHLIGHTS
-        ================================================== */
-
-        .highlights {
-
-            background: #080808;
-        }
-
-
-        .highlight-grid {
-
-            max-width: 1100px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 20px;
-        }
-
-
-        .highlight-card {
-
-            aspect-ratio: 16 / 9;
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    #151515,
-                    #080808
-                );
-
-            border: 1px solid var(--border);
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            position: relative;
-
-            overflow: hidden;
-        }
-
-
-        .highlight-card::before {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            background:
-
-                radial-gradient(
-                    circle,
-                    rgba(255,22,22,0.12),
-                    transparent 60%
-                );
-        }
-
-
-        .highlight-play {
-
-            position: relative;
-
-            z-index: 2;
-
-            width: 65px;
-            height: 65px;
-
-            border-radius: 50%;
-
-            background: var(--red);
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            font-size: 22px;
-
-            box-shadow:
-                0 0 30px rgba(255,0,0,0.3);
-        }
-
-
-        .highlight-label {
-
-            position: absolute;
-
-            left: 18px;
-            bottom: 15px;
-
-            z-index: 2;
-
-            font-size: 11px;
-
-            font-weight: 900;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        /* ==================================================
-           SPONSORS
-        ================================================== */
-
-        .sponsors {
-
-            background: #050505;
-
-            text-align: center;
-        }
-
-
-        .sponsor-grid {
-
-            max-width: 900px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 20px;
-        }
-
-
-        .sponsor {
-
-            min-height: 150px;
-
-            background: #0b0b0b;
-
-            border: 1px solid var(--border);
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            font-size: 30px;
-
-            font-weight: 1000;
-
-            text-transform: uppercase;
-
-            transition: 0.3s;
-        }
-
-
-        .sponsor:hover {
-
-            border-color: var(--red);
-
-            transform: translateY(-5px);
-        }
-
-
-        .sponsor span {
-
-            color: var(--red);
-        }
-
-
-        /* ==================================================
-           TWITCH
-        ================================================== */
-
-        .twitch {
-
-            position: relative;
-
-            text-align: center;
-
-            overflow: hidden;
-
-            background:
-
-                linear-gradient(
-                    rgba(0,0,0,0.90),
-                    rgba(0,0,0,0.96)
-                ),
-
-                url("fondo wolf.jpg");
-
-            background-size: cover;
-
-            background-position: center;
-        }
-
-
-        .twitch-content {
-
-            position: relative;
-
-            z-index: 2;
-        }
-
-
-        .twitch p {
-
-            color: #aaa;
-
-            font-size: 18px;
-
-            margin-bottom: 35px;
-        }
-
-
-        /* ==================================================
-           FINAL
-        ================================================== */
-
-        .final {
-
-            min-height: 65vh;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            background: #030303;
-        }
-
-
-        .final-content {
-
-            max-width: 900px;
-        }
-
-
-        .final-small {
-
-            color: var(--red);
-
-            font-size: 12px;
-
-            font-weight: 900;
-
-            letter-spacing: 4px;
-        }
-
-
         .final h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(60px, 10vw, 135px);
+            font-weight: 900;
+            line-height: 0.82;
 
-            margin-top: 20px;
-
-            font-size: clamp(
-                38px,
-                7vw,
-                80px
-            );
-
-            line-height: 0.95;
-
-            font-weight: 1000;
+            text-transform: uppercase;
         }
-
 
         .final h2 span {
-
             color: var(--red);
         }
 
 
-        .final p {
+        /* =========================================================
+           FOOTER
+        ========================================================= */
 
-            margin-top: 30px;
+        footer {
+            padding: 35px 8%;
 
-            color: #777;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: #030303;
+
+            border-top: 1px solid var(--border);
+
+            color: #555;
+
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        footer strong {
+            color: #aaa;
+        }
+
+
+        /* =========================================================
+           MUSIC PLAYER
+        ========================================================= */
+
+        .music-player {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+
+            z-index: 2000;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 10px 14px;
+
+            background: rgba(8,8,8,0.88);
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .music-button {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--red);
+            border: none;
+
+            color: white;
+
+            cursor: pointer;
 
             font-size: 15px;
         }
 
-
-        /* ==================================================
-           FOOTER
-        ================================================== */
-
-        footer {
-
-            padding: 50px 20px;
-
-            text-align: center;
-
-            background: #020202;
-
-            border-top: 1px solid var(--border);
-        }
-
-
-        .footer-logo img {
-
-            width: 85px;
-
-            margin-bottom: 20px;
-        }
-
-
-        footer p {
-
-            color: #666;
-
-            font-size: 12px;
-
-            margin-top: 7px;
-        }
-
-
-        footer strong {
-
-            color: #aaa;
-        }
-
-
-        .music-credit {
-
-            margin-top: 25px !important;
-
-            color: #444 !important;
-
-            font-size: 10px !important;
-
-            line-height: 1.7;
-        }
-
-
-        /* ==================================================
-           MUSIC PLAYER
-        ================================================== */
-
-        .music-player {
-
-            position: fixed;
-
-            right: 22px;
-            bottom: 22px;
-
-            z-index: 3000;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            padding: 8px 12px;
-
-            background:
-                rgba(5,5,5,0.94);
-
-            border:
-                1px solid rgba(255,22,22,0.35);
-
-            border-radius: 5px;
-
-            backdrop-filter: blur(12px);
-        }
-
-
-        .music-button {
-
-            width: 38px;
-            height: 38px;
-
-            border: none;
-
-            border-radius: 50%;
-
-            background: var(--red);
-
-            color: white;
-
-            cursor: pointer;
-
-            font-size: 14px;
-
-            transition: 0.3s;
-        }
-
-
-        .music-button:hover {
-
-            transform: scale(1.08);
-
-            box-shadow:
-                0 0 20px rgba(255,0,0,0.4);
-        }
-
-
         .music-info {
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 3px;
+            min-width: 150px;
         }
-
 
         .music-title {
+            color: white;
 
-            font-size: 9px;
-
-            font-weight: 900;
-
+            font-size: 10px;
+            font-weight: 800;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
-
 
         .music-status {
+            margin-top: 3px;
 
-            color: var(--red);
+            color: #777;
 
-            font-size: 8px;
-
-            font-weight: 900;
-
-            letter-spacing: 1px;
+            font-size: 9px;
         }
 
-
-        .volume-control {
-
+        .volume {
             width: 60px;
-
             accent-color: var(--red);
-
             cursor: pointer;
         }
 
 
-        /* ==================================================
-           ANIMATIONS
-        ================================================== */
+        /* =========================================================
+           REVEAL ANIMATION
+        ========================================================= */
 
-        @keyframes heroIn {
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s ease;
+        }
 
-            from {
-
-                opacity: 0;
-
-                transform:
-                    translateY(30px);
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform:
-                    translateY(0);
-            }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
 
-        @keyframes wolfPulse {
-
-            0%,100% {
-
-                filter:
-                    drop-shadow(
-                        0 0 20px
-                        rgba(255,0,0,0.20)
-                    );
-            }
-
-            50% {
-
-                filter:
-                    drop-shadow(
-                        0 0 35px
-                        rgba(255,0,0,0.45)
-                    );
-            }
-        }
-
-
-        /* ==================================================
+        /* =========================================================
            MOBILE
-        ================================================== */
+        ========================================================= */
 
-        @media(max-width: 900px) {
-
-            .record-grid {
-
-                grid-template-columns:
-                    repeat(3, 1fr);
-            }
-
-
-            .highlight-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-        }
-
-
-        @media(max-width: 700px) {
+        @media (max-width: 900px) {
 
             nav {
-
-                padding: 0 20px;
+                padding: 0 5%;
             }
 
-
             .nav-links {
-
                 display: none;
             }
 
-
             .hero {
-
-                background-attachment: scroll;
+                padding: 120px 7% 80px;
+                background-position: 65% center;
             }
-
 
             .hero h1 {
-
-                letter-spacing: -2px;
+                font-size: clamp(65px, 18vw, 100px);
             }
 
-
-            section {
-
-                padding:
-                    80px 20px;
+            .hero-side {
+                display: none;
             }
 
-
-            .record-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
+            .stat {
+                border-bottom: 1px solid var(--border);
+            }
 
-            .achievements-grid {
-
+            .about-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
 
+            .achievement-grid {
+                grid-template-columns: 1fr 1fr;
+            }
 
             .highlight-grid {
-
                 grid-template-columns: 1fr;
             }
 
+        }
 
-            .sponsor-grid {
 
-                grid-template-columns: 1fr;
+        @media (max-width: 600px) {
+
+            section {
+                padding: 85px 6%;
             }
 
+            .hero-logo {
+                width: 110px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat {
+                padding: 18px;
+            }
+
+            .stat-number {
+                font-size: 40px;
+            }
+
+            .about-highlight {
+                padding: 30px;
+            }
+
+            .about-highlight h3 {
+                font-size: 38px;
+            }
 
             .timeline::before {
-
-                left: 10px;
+                left: 8px;
             }
 
-
-            .timeline-item {
-
+            .timeline-item,
+            .timeline-item:nth-child(even) {
                 width: 100%;
-
-                margin-left: 0 !important;
-
-                padding:
-                    20px 20px 30px 40px;
+                margin-left: 0;
+                padding-left: 35px;
+                padding-right: 0;
+                text-align: left;
             }
 
-
-            .timeline-item:nth-child(odd)
-            .timeline-dot,
-            .timeline-item:nth-child(even)
-            .timeline-dot {
-
-                left: 4px;
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 2px;
                 right: auto;
             }
 
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sponsor-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sponsor {
+                min-height: 140px;
+                font-size: 35px;
+            }
 
             .music-player {
-
-                right: 12px;
-                bottom: 12px;
+                right: 10px;
+                bottom: 10px;
+                left: 10px;
             }
-
-
-            .volume-control {
-
-                display: none;
-            }
-        }
-
-
-        @media(max-width: 450px) {
-
-            .hero-logo {
-
-                width: 140px;
-            }
-
-
-            .record-number {
-
-                font-size: 28px;
-            }
-
-
-            .record-label {
-
-                font-size: 8px;
-            }
-
 
             .music-info {
+                flex: 1;
+            }
 
-                display: none;
+            .volume {
+                width: 50px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
             }
         }
 
     </style>
-
 </head>
 
 
 <body>
 
 
-<!-- ==================================================
-     AUDIO
-================================================== -->
-
-<audio
-    id="wolfMusic"
-    loop
-    preload="auto"
->
-
-    <source
-        src="DDark - Shootin Stars [NCS Release].mp3"
-        type="audio/mpeg"
-    >
-
-</audio>
-
-
-<!-- ==================================================
-     MUSIC PLAYER
-================================================== -->
-
-<div class="music-player">
-
-    <button
-        class="music-button"
-        id="musicButton"
-        onclick="toggleMusic()"
-    >
-        ▶
-    </button>
-
-    <div class="music-info">
-
-        <div class="music-title">
-            WOLF AUDIO
-        </div>
-
-        <div
-            class="music-status"
-            id="musicStatus"
-        >
-            MUSIC OFF
-        </div>
-
-    </div>
-
-    <input
-        type="range"
-        id="volumeControl"
-        class="volume-control"
-        min="0"
-        max="1"
-        step="0.01"
-        value="0.35"
-    >
-
-</div>
-
-
-<!-- ==================================================
-     NAVBAR
-================================================== -->
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
 <nav>
 
-    <a
-        href="#inicio"
-        class="nav-logo"
-    >
+    <div class="nav-logo">
+        THE <span>WOLF</span>
+    </div>
 
-        <img
-            src="logo wolf.jpg"
-            alt="Youh The Wolf 7"
-        >
-
-    </a>
-
-
-    <ul class="nav-links">
-
-        <li>
-            <a href="#historia">
-                Historia
-            </a>
-        </li>
-
-        <li>
-            <a href="#logros">
-                Logros
-            </a>
-        </li>
-
-        <li>
-            <a href="#highlights">
-                Highlights
-            </a>
-        </li>
-
-        <li>
-            <a href="#sponsors">
-                Sponsors
-            </a>
-        </li>
-
-        <li>
-            <a href="#twitch">
-                Twitch
-            </a>
-        </li>
-
-    </ul>
+    <div class="nav-links">
+        <a href="#historia">Historia</a>
+        <a href="#logros">Logros</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#twitch">Twitch</a>
+    </div>
 
 </nav>
 
 
-<!-- ==================================================
+<!-- =========================================================
      HERO
-================================================== -->
+========================================================= -->
 
-<section
-    class="hero"
-    id="inicio"
->
+<header class="hero">
 
     <div class="hero-content">
 
@@ -1620,420 +1277,207 @@
             class="hero-logo"
         >
 
-
-        <div class="hero-small">
-            Uruguay • Competitive Warzone
+        <div class="hero-kicker">
+            Competitive Call of Duty Player
         </div>
-
 
         <h1>
-
-            YOUH_
-
-            <span>
-                THE_WOLF_7
-            </span>
-
+            YOUH
+            <span>THE WOLF</span>
         </h1>
 
+        <p class="hero-description">
+            Jugador competitivo de Call of Duty: Warzone.
+            Representando a Uruguay en la escena competitiva
+            latinoamericana. Más de una década compitiendo,
+            cayendo, aprendiendo y volviendo a levantarse.
+        </p>
 
-        <div class="hero-subtitle">
-
-            THE WOLF IS BACK
-
+        <div class="hero-location">
+            <span>●</span>
+            URUGUAY 🇺🇾
         </div>
-
-
-        <div class="country">
-
-            🇺🇾 Representando Uruguay
-
-        </div>
-
 
         <div class="hero-buttons">
 
             <a
                 href="https://www.twitch.tv/youh_the_wolf_7"
                 target="_blank"
-                class="btn btn-red"
+                class="btn btn-primary"
             >
-
-                WATCH LIVE
-
+                ▶ WATCH LIVE
             </a>
-
 
             <a
                 href="#historia"
                 class="btn btn-outline"
             >
-
-                MY STORY
-
+                MY STORY ↓
             </a>
 
         </div>
 
     </div>
 
-</section>
 
-
-<!-- ==================================================
-     COMPETITIVE RECORD
-================================================== -->
-
-<section class="record">
-
-    <div class="section-header">
-
-        <small>
-            Competitive Profile
-        </small>
-
-        <h2>
-            THE <span>RECORD</span>
-        </h2>
-
-        <div class="section-line"></div>
-
+    <div class="hero-side">
+        <span>Competitive Player</span>
+        <strong>YOUH_THE_WOLF_7</strong>
+        <span>Uruguay / LATAM</span>
     </div>
 
+</header>
 
-    <div class="record-grid">
 
+<!-- =========================================================
+     STATS
+========================================================= -->
 
-        <div class="record-card">
+<section class="stats">
 
-            <div class="record-number">
-                2013
-            </div>
+    <div class="stats-grid">
 
-            <div class="record-label">
-                Inicio en COD
-            </div>
-
+        <div class="stat">
+            <div class="stat-number red">2013</div>
+            <div class="stat-label">Desde</div>
         </div>
 
-
-        <div class="record-card">
-
-            <div class="record-number">
-                10+
-            </div>
-
-            <div class="record-label">
-                Años compitiendo
-            </div>
-
+        <div class="stat">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Años compitiendo</div>
         </div>
 
-
-        <div class="record-card">
-
-            <div class="record-number">
-                TOP 50
-            </div>
-
-            <div class="record-label">
-                WSOW LATAM
-            </div>
-
+        <div class="stat">
+            <div class="stat-number red">TOP 50</div>
+            <div class="stat-label">WSOW LATAM</div>
         </div>
 
-
-        <div class="record-card">
-
-            <div class="record-number">
-                MVP
-            </div>
-
-            <div class="record-label">
-                Regional
-            </div>
-
+        <div class="stat">
+            <div class="stat-number">MVP</div>
+            <div class="stat-label">Regional</div>
         </div>
 
-
-        <div class="record-card">
-
-            <div class="record-number">
-                🇺🇾
-            </div>
-
-            <div class="record-label">
-                Uruguay
-            </div>
-
+        <div class="stat">
+            <div class="stat-number red">🇺🇾</div>
+            <div class="stat-label">Uruguay</div>
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
-     THE WOLF / HISTORY
-================================================== -->
+<!-- =========================================================
+     HISTORIA
+========================================================= -->
 
 <section
-    class="wolf-section"
+    class="about reveal"
     id="historia"
 >
 
-    <div class="section-header">
+    <div class="section-label">
+        THE STORY
+    </div>
 
-        <small>
-            The journey
-        </small>
-
-        <h2>
-            THE <span>WOLF</span>
-        </h2>
-
-        <div class="section-line"></div>
-
+    <div class="section-title">
+        MÁS QUE<br>
+        UN JUGADOR.
     </div>
 
 
-    <div class="wolf-content">
+    <div class="about-grid">
 
+        <div class="about-text">
 
-        <p>
+            <p>
+                Mi nombre es <strong>Yoel Díaz</strong>,
+                conocido competitivamente como
+                <strong>Youh_The_Wolf_7</strong>.
+            </p>
 
-            <strong>
-                Mi nombre es Yoel Díaz.
-                En la escena competitiva me conocen como
-                Youh_The_Wolf_7.
-            </strong>
+            <p>
+                Empecé mi camino en Call of Duty en
+                <strong>2013</strong>. Lo que comenzó como
+                una pasión terminó convirtiéndose en una
+                década de competición, sacrificio y aprendizaje.
+            </p>
 
-        </p>
+            <p>
+                Durante mi carrera competí en escenarios
+                importantes de la escena latinoamericana,
+                incluyendo <strong>Call of Duty Challengers
+                2023</strong> y el <strong>Atlanta FaZe Regional</strong>.
+            </p>
 
+            <p>
+                También conseguí el título de
+                <strong>Campeón Sudamericano Regional de Z League</strong>
+                y fui reconocido como
+                <strong>MVP / Mejor Jugador</strong> en torneos
+                regionales de América.
+            </p>
 
-        <p>
-
-            Mi historia con Call of Duty comenzó en
-            <strong>2013</strong>.
-
-            Lo que empezó como un sueño de niño
-            terminó convirtiéndose en una parte
-            fundamental de mi vida.
-
-        </p>
-
-
-        <p>
-
-            Durante más de una década recorrí
-            el camino competitivo, enfrentando
-            sacrificios, victorias, derrotas
-            y momentos que pusieron a prueba
-            cuánto estaba dispuesto a luchar
-            por mis objetivos.
-
-        </p>
-
-
-        <p>
-
-            Desde <strong>Uruguay 🇺🇾</strong>,
-            tuve la oportunidad de competir
-            dentro de la escena de Call of Duty
-            en Latinoamérica y América.
-
-        </p>
-
-
-        <div class="wolf-quote">
-
-            <h3>
-
-                Caí.
-
-                <br>
-
-                Me alejé.
-
-                <br>
-
-                <span>
-                    Pero nunca abandoné el sueño.
-                </span>
-
-            </h3>
+            <p>
+                El objetivo siempre fue el mismo:
+                llegar al escenario más grande.
+                La <strong>WSOW LAN</strong>.
+            </p>
 
         </div>
 
 
-        <p>
-
-            Fui participante de
-            <strong>
-                Call of Duty Challengers 2023
-            </strong>,
-
-            formé parte de
-            <strong>
-                Atlanta FaZe Regional
-            </strong>,
-
-            me convertí en
-            <strong>
-                Campeón Sudamericano Regional de Z League
-            </strong>
-
-            y fui reconocido como
-            <strong>
-                MVP / Mejor Jugador
-            </strong>
-
-            en torneos regionales de América.
-
-        </p>
-
-
-        <p>
-
-            También estuve cerca de alcanzar
-            uno de los objetivos más importantes
-            de mi carrera:
-
-        </p>
-
-
-        <div class="wolf-quote">
+        <div class="about-highlight">
 
             <h3>
-
-                Llegar al presencial
-
-                <br>
-
-                de la
-
-                <br>
-
-                <span>
-                    World Series of Warzone.
-                </span>
-
+                ESTUVE<br>
+                <span>CERCA.</span>
             </h3>
 
+            <p>
+                Llegué hasta las puertas de mi objetivo.
+                No conseguí llegar al presencial de WSOW.
+                Y durante un tiempo me alejé del competitivo.
+            </p>
+
+            <br>
+
+            <p>
+                Pero una historia que todavía no terminó
+                no puede quedarse en un punto final.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Hoy estoy de vuelta.</strong>
+            </p>
+
         </div>
-
-
-        <p>
-
-            Estuve cerca.
-
-        </p>
-
-
-        <p>
-
-            Pero no lo conseguí.
-
-        </p>
-
-
-        <p>
-
-            Y después de eso,
-            me alejé del competitivo.
-
-        </p>
-
-
-        <p>
-
-            Durante un tiempo,
-            el sueño quedó en pausa.
-
-        </p>
-
-
-        <p>
-
-            <strong>
-                Pero nunca murió.
-            </strong>
-
-        </p>
-
-
-        <p>
-
-            Hoy estoy de vuelta.
-
-        </p>
-
-
-        <p>
-
-            No regreso para demostrar
-            que nunca caí.
-
-            <br><br>
-
-            <strong>
-                Regreso para demostrar
-                que pude levantarme.
-            </strong>
-
-        </p>
-
-
-        <p>
-
-            Quiero volver a competir contra
-            los mejores.
-
-            <br>
-
-            Quiero representar a Uruguay.
-
-            <br>
-
-            Quiero volver a los grandes escenarios.
-
-            <br>
-
-            Y quiero terminar lo que empecé.
-
-        </p>
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================================
      TIMELINE
-================================================== -->
+========================================================= -->
 
 <section class="timeline-section">
 
-    <div class="section-header">
+    <div class="section-label">
+        CAREER
+    </div>
 
-        <small>
-            The journey
-        </small>
-
-        <h2>
-            MY <span>ROAD</span>
-        </h2>
-
-        <div class="section-line"></div>
-
+    <div class="section-title">
+        EL CAMINO
     </div>
 
 
     <div class="timeline">
 
-
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
 
             <div class="timeline-dot"></div>
 
@@ -2042,18 +1486,19 @@
             </div>
 
             <h3>
-                The Beginning
+                EL COMIENZO
             </h3>
 
             <p>
-                Comienza mi historia con Call of Duty
-                y nace el sueño de competir.
+                Comienza el camino en Call of Duty.
+                Una pasión que terminaría convirtiéndose
+                en una carrera competitiva.
             </p>
 
         </div>
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
 
             <div class="timeline-dot"></div>
 
@@ -2062,18 +1507,19 @@
             </div>
 
             <h3>
-                Call of Duty Challengers
+                CALL OF DUTY CHALLENGERS
             </h3>
 
             <p>
-                Participación dentro del circuito
-                competitivo de Call of Duty.
+                Competencia en el circuito de Call of Duty
+                Challengers y salto hacia escenarios
+                competitivos de mayor nivel.
             </p>
 
         </div>
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
 
             <div class="timeline-dot"></div>
 
@@ -2082,18 +1528,19 @@
             </div>
 
             <h3>
-                Atlanta FaZe Regional
+                ATLANTA FAZE REGIONAL
             </h3>
 
             <p>
-                Experiencia competitiva dentro
-                de Atlanta FaZe Regional.
+                Participación en el Atlanta FaZe Regional,
+                enfrentando a jugadores de alto nivel
+                dentro de la escena competitiva.
             </p>
 
         </div>
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
 
             <div class="timeline-dot"></div>
 
@@ -2102,38 +1549,38 @@
             </div>
 
             <h3>
-                Z League Champion
+                CAMPEÓN SUDAMERICANO
             </h3>
 
             <p>
-                Campeón Sudamericano Regional
-                de Z League.
+                Campeón Sudamericano Regional de Z League,
+                representando a Uruguay.
             </p>
 
         </div>
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
 
             <div class="timeline-dot"></div>
 
             <div class="timeline-year">
-                REGIONAL
-            </div>
-
-            <h3>
                 MVP
+            </div>
+
+            <h3>
+                MEJOR JUGADOR
             </h3>
 
             <p>
-                Reconocido como MVP / Mejor Jugador
+                Reconocimiento como MVP / Mejor Jugador
                 en torneos regionales de América.
             </p>
 
         </div>
 
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
 
             <div class="timeline-dot"></div>
 
@@ -2142,251 +1589,247 @@
             </div>
 
             <h3>
-                The Wolf Is Back
+                THE WOLF IS BACK
             </h3>
 
             <p>
-                El regreso competitivo.
-                Una nueva etapa comienza.
+                Después de alejarme del competitivo,
+                vuelvo con una sola misión:
+                terminar lo que empecé.
             </p>
 
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
-     ACHIEVEMENTS
-================================================== -->
+<!-- =========================================================
+     LOGROS
+========================================================= -->
 
 <section
     class="achievements"
     id="logros"
 >
 
-    <div class="section-header">
+    <div class="section-label">
+        COMPETITIVE RECORD
+    </div>
 
-        <small>
-            Career
-        </small>
-
-        <h2>
-            <span>ACHIEVEMENTS</span>
-        </h2>
-
-        <div class="section-line"></div>
-
+    <div class="section-title">
+        LOGROS
     </div>
 
 
-    <div class="achievements-grid">
+    <div class="achievement-grid">
 
 
-        <div class="achievement">
+        <div class="achievement reveal">
+
+            <div class="achievement-number">
+                01
+            </div>
 
             <div class="achievement-icon">
                 🏆
             </div>
 
             <h3>
-                Campeón Sudamericano
+                Campeón<br>
+                Sudamericano
             </h3>
 
             <p>
-                Campeón del Regional Sudamericano
-                de Z League.
+                Z League Regional
             </p>
 
         </div>
 
 
-        <div class="achievement">
+        <div class="achievement reveal">
+
+            <div class="achievement-number">
+                02
+            </div>
 
             <div class="achievement-icon">
-                ⭐
+                ★
             </div>
 
             <h3>
-                MVP Regional
+                MVP<br>
+                Regional
             </h3>
 
             <p>
-                Reconocido como MVP / Mejor Jugador
-                en torneos regionales de América.
+                Mejor Jugador
             </p>
 
         </div>
 
 
-        <div class="achievement">
+        <div class="achievement reveal">
+
+            <div class="achievement-number">
+                03
+            </div>
 
             <div class="achievement-icon">
-                🎮
+                ◈
             </div>
 
             <h3>
-                Call of Duty Challengers
+                COD<br>
+                Challengers
             </h3>
 
             <p>
-                Participación en Call of Duty
-                Challengers 2023.
+                2023
             </p>
 
         </div>
 
 
-        <div class="achievement">
+        <div class="achievement reveal">
+
+            <div class="achievement-number">
+                04
+            </div>
 
             <div class="achievement-icon">
-                🐺
+                ⚡
             </div>
 
             <h3>
-                Atlanta FaZe Regional
+                Atlanta<br>
+                FaZe Regional
             </h3>
 
             <p>
-                Experiencia competitiva dentro
-                de Atlanta FaZe Regional.
+                Competitivo
             </p>
 
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================================
      HIGHLIGHTS
-================================================== -->
+========================================================= -->
 
 <section
     class="highlights"
     id="highlights"
 >
 
-    <div class="section-header">
+    <div class="section-label">
+        GAMEPLAY
+    </div>
 
-        <small>
-            Gameplay
-        </small>
-
-        <h2>
-            WOLF <span>HIGHLIGHTS</span>
-        </h2>
-
-        <div class="section-line"></div>
-
+    <div class="section-title">
+        HIGHLIGHTS
     </div>
 
 
     <div class="highlight-grid">
 
 
-        <div class="highlight-card">
+        <div class="highlight reveal">
 
-            <div class="highlight-play">
+            <div class="highlight-label">
+                COMING SOON
+            </div>
+
+            <div class="play">
                 ▶
             </div>
 
-            <div class="highlight-label">
-                Highlight #01
+            <div class="highlight-title">
+                WARZONE CLUTCHES
             </div>
 
         </div>
 
 
-        <div class="highlight-card">
+        <div class="highlight reveal">
 
-            <div class="highlight-play">
+            <div class="highlight-label">
+                COMING SOON
+            </div>
+
+            <div class="play">
                 ▶
             </div>
 
-            <div class="highlight-label">
-                Highlight #02
+            <div class="highlight-title">
+                TOURNAMENT PLAYS
             </div>
 
         </div>
 
 
-        <div class="highlight-card">
+        <div class="highlight reveal">
 
-            <div class="highlight-play">
+            <div class="highlight-label">
+                COMING SOON
+            </div>
+
+            <div class="play">
                 ▶
             </div>
 
-            <div class="highlight-label">
-                Highlight #03
+            <div class="highlight-title">
+                THE WOLF MOMENTS
             </div>
 
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================================
      SPONSORS
-================================================== -->
+========================================================= -->
 
 <section
     class="sponsors"
     id="sponsors"
 >
 
-    <div class="section-header">
+    <div class="section-label">
+        PARTNERS
+    </div>
 
-        <small>
-            Partners
-        </small>
-
-        <h2>
-            <span>SPONSORS</span>
-        </h2>
-
-        <div class="section-line"></div>
-
+    <div class="section-title">
+        SPONSORS
     </div>
 
 
     <div class="sponsor-grid">
 
-
-        <div class="sponsor">
-
-            Monster
-            <span>
-                Energy
-            </span>
-
+        <div class="sponsor reveal">
+            MONSTER <span>ENERGY</span>
         </div>
 
-
-        <div class="sponsor">
-
-            <span>
-                Redragon
-            </span>
-
+        <div class="sponsor reveal">
+            RED<span>RAGON</span>
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================================
      TWITCH
-================================================== -->
+========================================================= -->
 
 <section
     class="twitch"
@@ -2395,239 +1838,238 @@
 
     <div class="twitch-content">
 
-
-        <div class="section-header">
-
-            <small>
-                Live
-            </small>
-
-            <h2>
-                LIVE ON <span>TWITCH</span>
-            </h2>
-
-            <div class="section-line"></div>
-
+        <div class="section-label" style="justify-content:center;">
+            LIVE
         </div>
 
+        <h2>
+            WATCH<br>
+            <span>THE WOLF</span>
+        </h2>
 
         <p>
-
-            Competitive Warzone.
-            Gameplay.
-            Tips.
-            El camino de regreso al máximo nivel.
-
+            Gameplay competitivo, ranked, torneos,
+            consejos y el camino de regreso a la cima.
+            Si querés mejorar, aprender y competir,
+            este es el lugar.
         </p>
-
 
         <a
             href="https://www.twitch.tv/youh_the_wolf_7"
             target="_blank"
-            class="btn btn-red"
+            class="btn btn-primary"
         >
-
-            WATCH THE WOLF LIVE
-
+            ▶ SEGUIR EN TWITCH
         </a>
-
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================================
      FINAL MESSAGE
-================================================== -->
+========================================================= -->
 
 <section class="final">
 
     <div class="final-content">
 
-
         <div class="final-small">
-            THE NEXT CHAPTER
+            THIS IS NOT THE END
         </div>
-
 
         <h2>
-
-            NO QUIERO
-
-            <br>
-
-            QUEDARME
-
-            <br>
-
-            <span>
-                CERCA.
-            </span>
-
+            I WAS<br>
+            <span>CLOSE.</span><br>
+            NOW I'M<br>
+            BACK.
         </h2>
-
-
-        <p>
-
-            La caída fue parte de mi historia.
-            El regreso será parte de mi legado.
-
-        </p>
-
-
-        <div style="margin-top:35px;">
-
-            <a
-                href="#inicio"
-                class="btn btn-red"
-            >
-
-                THE WOLF IS BACK
-
-            </a>
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================================
      FOOTER
-================================================== -->
+========================================================= -->
 
 <footer>
 
-
-    <div class="footer-logo">
-
-        <img
-            src="logo wolf.jpg"
-            alt="Youh The Wolf 7"
-        >
-
+    <div>
+        © 2026 <strong>YOUH_THE_WOLF_7</strong>
     </div>
 
+    <div>
+        URUGUAY 🇺🇾 · CALL OF DUTY · ESPORTS
+    </div>
 
-    <p>
-
-        <strong>
-            YOUH_THE_WOLF_7 🇺🇾
-        </strong>
-
-    </p>
-
-
-    <p>
-        Professional Call of Duty: Warzone Player
-    </p>
-
-
-    <p>
-        © 2026 Yoel Díaz. Todos los derechos reservados.
-    </p>
-
-
-    <p class="music-credit">
-
-        Music: Aero Chord feat. DDARK - Shootin Stars [NCS Release]
-
-        <br>
-
-        Music provided by NoCopyrightSounds
-
-    </p>
-
+    <div>
+        Music: Aero Chord feat. DDARK - Shootin Stars
+    </div>
 
 </footer>
 
 
-<!-- ==================================================
+<!-- =========================================================
+     MUSIC PLAYER
+========================================================= -->
+
+<div class="music-player">
+
+    <button
+        class="music-button"
+        id="musicButton"
+    >
+        ▶
+    </button>
+
+    <div class="music-info">
+
+        <div class="music-title">
+            Shootin Stars
+        </div>
+
+        <div
+            class="music-status"
+            id="musicStatus"
+        >
+            Música pausada
+        </div>
+
+    </div>
+
+    <input
+        type="range"
+        class="volume"
+        id="volume"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.35"
+    >
+
+</div>
+
+
+<audio
+    id="music"
+    loop
+    preload="auto"
+>
+    <source
+        src="DDark - Shootin Stars [NCS Release].mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+<!-- =========================================================
      JAVASCRIPT
-================================================== -->
+========================================================= -->
 
 <script>
 
+    /* =========================================================
+       MUSIC
+    ========================================================= */
 
-    const music =
-        document.getElementById("wolfMusic");
-
-
-    const musicButton =
-        document.getElementById("musicButton");
-
-
-    const musicStatus =
-        document.getElementById("musicStatus");
-
-
-    const volumeControl =
-        document.getElementById("volumeControl");
-
+    const music = document.getElementById("music");
+    const musicButton = document.getElementById("musicButton");
+    const musicStatus = document.getElementById("musicStatus");
+    const volume = document.getElementById("volume");
 
     music.volume = 0.35;
 
 
-    function toggleMusic() {
-
+    musicButton.addEventListener("click", function() {
 
         if (music.paused) {
 
+            music.play();
 
-            music.play()
-
-                .then(() => {
-
-                    musicButton.textContent = "❚❚";
-
-                    musicStatus.textContent =
-                        "MUSIC ON";
-
-                })
-
-                .catch(() => {
-
-                    musicStatus.textContent =
-                        "CLICK AGAIN";
-
-                });
-
+            musicButton.textContent = "❚❚";
+            musicStatus.textContent = "Reproduciendo";
 
         } else {
 
-
             music.pause();
 
-
-            musicButton.textContent =
-                "▶";
-
-
-            musicStatus.textContent =
-                "MUSIC OFF";
+            musicButton.textContent = "▶";
+            musicStatus.textContent = "Música pausada";
 
         }
 
-    }
+    });
 
 
-    volumeControl.addEventListener(
-        "input",
-        function () {
+    volume.addEventListener("input", function() {
 
-            music.volume =
-                this.value;
+        music.volume = this.value;
 
+    });
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    const reveals = document.querySelectorAll(".reveal");
+
+
+    const revealObserver = new IntersectionObserver(
+
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
         }
+
     );
 
 
+    reveals.forEach(function(element) {
+
+        revealObserver.observe(element);
+
+    });
+
+
+    /* =========================================================
+       NAVBAR EFFECT
+    ========================================================= */
+
+    const nav = document.querySelector("nav");
+
+
+    window.addEventListener("scroll", function() {
+
+        if (window.scrollY > 50) {
+
+            nav.style.background = "rgba(3,3,3,0.94)";
+
+        } else {
+
+            nav.style.background = "rgba(5,5,5,0.72)";
+
+        }
+
+    });
+
 </script>
 
-
 </body>
-
 </html>
