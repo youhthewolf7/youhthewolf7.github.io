@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://youhthewolf.github.io/sitemap.xml
