@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Youh_The_Wolf_7 | Warzone Competitivo</title>
+    <title>Youh_The_Wolf_7 | Warzone Competitive Player</title>
 
     <meta name="description"
-        content="Youh_The_Wolf_7 — jugador competitivo profesional de Call of Duty: Warzone de Uruguay. Campeón Sudamericano Regional ZLeague, MVP regional y clasificado Top 50 de la Latin American WSOW.">
+    content="Youh_The_Wolf_7, jugador competitivo de Call of Duty: Warzone de Uruguay. Campeón Sudamericano Regional ZLeague, MVP regional y Top 50 de la Latin American WSOW.">
 
     <meta name="keywords"
-        content="Youh The Wolf 7, Youh_The_Wolf_7, Yoel Diaz, Warzone Uruguay, Call of Duty Warzone, jugador competitivo, ZLeague, WSOW, Twitch">
+    content="Youh The Wolf 7, Youh_The_Wolf_7, Yoel Diaz, Warzone, Call of Duty, Uruguay, ZLeague, WSOW, Twitch">
 
     <meta name="author" content="Youh_The_Wolf_7">
 
     <style>
+
+        /* ========================================
+           CONFIGURACIÓN GENERAL
+        ======================================== */
 
         * {
             margin: 0;
@@ -33,9 +37,11 @@
             overflow-x: hidden;
         }
 
-        /* =========================
+
+        /* ========================================
            FONDO
-        ========================= */
+           NO MODIFICAR
+        ======================================== */
 
         body::before {
             content: "";
@@ -47,7 +53,7 @@
                     90deg,
                     rgba(0,0,0,0.92),
                     rgba(0,0,0,0.65),
-                    rgba(0,0,0,0.85)
+                    rgba(0,0,0,0.80)
                 ),
                 url("fondo wolf.png");
 
@@ -66,7 +72,7 @@
             background:
                 radial-gradient(
                     circle at 70% 30%,
-                    rgba(220,0,0,0.18),
+                    rgba(220,0,0,0.15),
                     transparent 40%
                 );
 
@@ -74,26 +80,31 @@
             pointer-events: none;
         }
 
-        /* =========================
-           NAVEGACIÓN
-        ========================= */
+
+        /* ========================================
+           NAVBAR
+        ======================================== */
 
         nav {
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            padding: 18px 6%;
+            padding: 15px 6%;
 
-            background: rgba(0,0,0,0.75);
+            background: rgba(0,0,0,0.72);
+
             backdrop-filter: blur(12px);
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
 
             z-index: 1000;
         }
@@ -101,77 +112,123 @@
         .nav-logo {
             display: flex;
             align-items: center;
+
             gap: 12px;
 
             font-weight: 900;
+
             letter-spacing: 1px;
         }
 
         .nav-logo img {
             width: 45px;
             height: 45px;
+
             object-fit: contain;
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 28px;
         }
 
         .nav-links a {
             color: white;
+
             text-decoration: none;
-            font-weight: 700;
+
             font-size: 14px;
+
+            font-weight: 700;
 
             transition: 0.3s;
         }
 
         .nav-links a:hover {
-            color: #ff1a1a;
+            color: #ff1616;
         }
 
-        /* =========================
+
+        /* ========================================
            HERO
-        ========================= */
+        ======================================== */
 
         .hero {
+
             min-height: 100vh;
 
             display: flex;
+
             align-items: center;
 
-            padding: 130px 8% 80px;
+            padding:
+                130px 8% 80px;
 
             position: relative;
+
+            /*
+            IMPORTANTE:
+            Dejamos espacio a la derecha
+            para que Monster y los sponsors
+            del fondo sean visibles.
+            */
+
+            justify-content: flex-start;
         }
+
 
         .hero-content {
-            max-width: 800px;
+
+            /*
+            ANTES:
+            max-width: 800px
+
+            AHORA:
+            El contenido ocupa menos espacio
+            para no tapar los sponsors.
+            */
+
+            width: 48%;
+
+            max-width: 650px;
+
+            position: relative;
+
+            z-index: 5;
         }
 
+
         .tag {
+
             display: inline-block;
 
-            padding: 8px 15px;
+            padding:
+                8px 14px;
 
-            border: 1px solid rgba(255,0,0,0.5);
-            background: rgba(255,0,0,0.08);
+            margin-bottom: 20px;
 
-            color: #ff3030;
+            border:
+                1px solid rgba(255,0,0,0.5);
 
-            font-size: 13px;
+            background:
+                rgba(255,0,0,0.08);
+
+            color: #ff2828;
+
+            font-size: 12px;
+
             font-weight: 900;
 
             letter-spacing: 2px;
-
-            margin-bottom: 20px;
         }
 
-        .hero h1 {
-            font-size: clamp(55px, 9vw, 120px);
 
-            line-height: 0.9;
+        .hero h1 {
+
+            font-size:
+                clamp(55px, 8vw, 105px);
+
+            line-height: 0.88;
 
             font-weight: 1000;
 
@@ -179,391 +236,540 @@
 
             letter-spacing: -5px;
 
-            text-shadow:
-                0 0 30px rgba(255,0,0,0.15);
+            margin: 0;
         }
+
 
         .hero h1 span {
+
             color: #e50909;
+
         }
 
+
         .hero-subtitle {
+
             margin-top: 25px;
 
-            font-size: 20px;
+            font-size: 18px;
+
+            line-height: 1.6;
 
             color: #d0d0d0;
 
-            max-width: 700px;
-
-            line-height: 1.6;
+            max-width: 600px;
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
 
-            margin-top: 35px;
+        /* ========================================
+           BOTONES
+        ======================================== */
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 14px;
+
+            margin-top: 30px;
 
             flex-wrap: wrap;
         }
 
+
         .btn {
+
             display: inline-block;
 
-            padding: 15px 28px;
+            padding:
+                14px 25px;
 
             text-decoration: none;
 
             font-weight: 900;
 
-            transition: 0.3s;
+            font-size: 14px;
 
-            border: 1px solid #e50909;
+            border:
+                1px solid #e50909;
+
+            transition: 0.3s;
         }
+
 
         .btn-primary {
+
             background: #e50909;
+
             color: white;
         }
+
 
         .btn-primary:hover {
-            background: #ff2525;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(229,9,9,0.3);
+
+            background: #ff2020;
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(229,9,9,0.35);
         }
 
+
         .btn-secondary {
-            background: rgba(255,255,255,0.03);
+
+            background:
+                rgba(0,0,0,0.4);
+
             color: white;
         }
 
+
         .btn-secondary:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-3px);
+
+            background:
+                rgba(255,255,255,0.1);
+
+            transform:
+                translateY(-3px);
         }
 
-        /* =========================
+
+        /* ========================================
            ESTADÍSTICAS
-        ========================= */
+        ======================================== */
 
         .stats {
+
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:
+                repeat(3, 1fr);
 
-            max-width: 800px;
+            max-width: 650px;
 
-            margin-top: 60px;
+            margin-top: 45px;
 
-            border-top: 1px solid rgba(255,255,255,0.1);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-top:
+                1px solid rgba(255,255,255,0.12);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.12);
         }
+
 
         .stat {
-            padding: 25px;
 
-            border-right: 1px solid rgba(255,255,255,0.1);
+            padding:
+                20px 10px;
 
             text-align: center;
+
+            border-right:
+                1px solid rgba(255,255,255,0.1);
         }
 
+
         .stat:last-child {
+
             border-right: none;
         }
 
-        .stat strong {
-            display: block;
 
-            font-size: 30px;
+        .stat strong {
+
+            display: block;
 
             color: #ff1717;
 
-            margin-bottom: 6px;
+            font-size: 24px;
+
+            margin-bottom: 5px;
         }
 
+
         .stat span {
-            font-size: 11px;
+
+            display: block;
 
             color: #aaa;
+
+            font-size: 10px;
 
             text-transform: uppercase;
 
             letter-spacing: 1px;
+
+            line-height: 1.4;
         }
 
-        /* =========================
+
+        /* ========================================
            SECCIONES
-        ========================= */
+        ======================================== */
 
         section {
-            padding: 100px 8%;
+
+            padding:
+                100px 8%;
         }
 
+
         .section-title {
+
             font-size: 45px;
 
-            margin-bottom: 15px;
+            font-weight: 1000;
 
             text-transform: uppercase;
 
-            font-weight: 1000;
+            margin-bottom: 15px;
         }
 
+
         .section-title span {
+
             color: #e50909;
         }
 
+
         .section-description {
-            color: #999;
 
             max-width: 700px;
 
+            color: #999;
+
             line-height: 1.7;
 
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
-        /* =========================
+
+        /* ========================================
            HISTORIA
-        ========================= */
+        ======================================== */
 
         .story {
+
             max-width: 900px;
 
-            background: rgba(0,0,0,0.55);
-
-            border-left: 3px solid #e50909;
-
             padding: 35px;
+
+            background:
+                rgba(0,0,0,0.58);
+
+            border-left:
+                3px solid #e50909;
 
             backdrop-filter: blur(8px);
         }
 
+
         .story p {
+
             color: #ddd;
 
-            font-size: 18px;
+            font-size: 17px;
 
             line-height: 1.8;
 
             margin-bottom: 18px;
         }
 
-        /* =========================
+
+        .story p:last-child {
+
+            margin-bottom: 0;
+        }
+
+
+        /* ========================================
            LOGROS
-        ========================= */
+        ======================================== */
 
         .achievements {
+
             display: grid;
 
             grid-template-columns:
-                repeat(auto-fit, minmax(250px, 1fr));
+                repeat(auto-fit, minmax(240px, 1fr));
 
             gap: 20px;
         }
 
+
         .achievement {
+
             padding: 30px;
 
-            background: rgba(10,10,10,0.78);
+            background:
+                rgba(5,5,5,0.82);
 
-            border: 1px solid rgba(255,255,255,0.08);
+            border:
+                1px solid rgba(255,255,255,0.08);
 
             transition: 0.3s;
         }
 
-        .achievement:hover {
-            transform: translateY(-7px);
 
-            border-color: rgba(229,9,9,0.7);
+        .achievement:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(229,9,9,0.7);
 
             box-shadow:
-                0 15px 40px rgba(0,0,0,0.5);
+                0 15px 40px
+                rgba(0,0,0,0.5);
         }
 
+
         .achievement-number {
-            font-size: 13px;
 
             color: #e50909;
+
+            font-size: 12px;
 
             font-weight: 900;
 
             letter-spacing: 2px;
 
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
+
         .achievement h3 {
-            font-size: 23px;
+
+            font-size: 22px;
 
             margin-bottom: 10px;
         }
 
+
         .achievement p {
+
             color: #999;
 
             line-height: 1.6;
         }
 
-        /* =========================
+
+        /* ========================================
            IDENTIDAD
-        ========================= */
+        ======================================== */
 
         .identity {
+
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
-            gap: 40px;
+            gap: 50px;
 
             align-items: center;
         }
 
+
         .identity-logo {
+
             display: flex;
 
             justify-content: center;
+
             align-items: center;
         }
 
+
         .identity-logo img {
-            width: min(350px, 80%);
+
+            width:
+                min(350px, 80%);
 
             filter:
                 drop-shadow(
-                    0 0 40px rgba(255,0,0,0.25)
+                    0 0 40px
+                    rgba(255,0,0,0.25)
                 );
         }
 
+
         .identity-text h3 {
+
             font-size: 32px;
 
             margin-bottom: 20px;
         }
 
+
         .identity-text p {
+
             color: #aaa;
 
-            line-height: 1.8;
-
             font-size: 17px;
+
+            line-height: 1.8;
         }
 
-        /* =========================
+
+        /* ========================================
            SPONSORS
-        ========================= */
+        ======================================== */
 
         .sponsors {
+
             display: flex;
 
             justify-content: center;
+
             align-items: center;
 
-            gap: 60px;
+            gap: 40px;
 
             flex-wrap: wrap;
-
-            margin-top: 40px;
         }
 
+
         .sponsor {
-            padding: 20px 35px;
 
-            background: rgba(0,0,0,0.65);
+            padding:
+                20px 35px;
 
-            border: 1px solid rgba(255,255,255,0.08);
+            background:
+                rgba(0,0,0,0.65);
 
-            font-size: 20px;
-
-            font-weight: 900;
+            border:
+                1px solid rgba(255,255,255,0.08);
 
             color: #ddd;
+
+            font-size: 19px;
+
+            font-weight: 900;
 
             transition: 0.3s;
         }
 
-        .sponsor:hover {
-            border-color: #e50909;
 
-            transform: translateY(-5px);
+        .sponsor:hover {
+
+            border-color:
+                #e50909;
+
+            transform:
+                translateY(-5px);
         }
 
-        /* =========================
+
+        /* ========================================
            TWITCH
-        ========================= */
+        ======================================== */
 
         .twitch-box {
+
             text-align: center;
 
-            padding: 70px 30px;
+            padding:
+                70px 30px;
 
             background:
                 linear-gradient(
                     135deg,
                     rgba(229,9,9,0.15),
-                    rgba(0,0,0,0.8)
+                    rgba(0,0,0,0.85)
                 );
 
-            border: 1px solid rgba(229,9,9,0.3);
+            border:
+                1px solid
+                rgba(229,9,9,0.3);
         }
 
+
         .twitch-box h2 {
+
             font-size: 40px;
 
             margin-bottom: 15px;
         }
 
+
+        .twitch-box h2 span {
+
+            color: #e50909;
+        }
+
+
         .twitch-box p {
+
             color: #aaa;
 
             margin-bottom: 30px;
         }
 
-        /* =========================
+
+        /* ========================================
            FOOTER
-        ========================= */
+        ======================================== */
 
         footer {
-            padding: 50px 8%;
+
+            padding:
+                50px 8%;
 
             text-align: center;
 
             background: #020202;
 
-            border-top: 1px solid rgba(255,255,255,0.08);
+            border-top:
+                1px solid rgba(255,255,255,0.08);
         }
 
+
         footer img {
+
             width: 60px;
 
             margin-bottom: 15px;
         }
 
+
         footer p {
+
             color: #666;
 
             font-size: 13px;
+
+            margin-top: 6px;
         }
 
-        /* =========================
-           MÚSICA
-        ========================= */
+
+        /* ========================================
+           BOTÓN DE MÚSICA
+        ======================================== */
 
         .music-button {
+
             position: fixed;
 
-            bottom: 25px;
             right: 25px;
 
+            bottom: 25px;
+
             width: 55px;
+
             height: 55px;
 
             border-radius: 50%;
 
-            border: 1px solid #e50909;
+            border:
+                1px solid #e50909;
 
-            background: rgba(0,0,0,0.8);
+            background:
+                rgba(0,0,0,0.85);
 
             color: white;
 
@@ -576,116 +782,207 @@
             transition: 0.3s;
         }
 
+
         .music-button:hover {
+
             background: #e50909;
 
-            transform: scale(1.08);
+            transform:
+                scale(1.08);
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
 
-        @media(max-width: 800px) {
+        /* ========================================
+           CELULAR
+        ======================================== */
 
-            nav {
-                padding: 15px 5%;
+        @media(max-width: 900px) {
+
+            .hero-content {
+
+                width: 60%;
+
             }
 
+        }
+
+
+        @media(max-width: 700px) {
+
             .nav-links {
+
                 display: none;
             }
 
+
             .hero {
-                padding: 130px 7% 70px;
+
+                padding:
+                    120px 7% 70px;
             }
 
+
+            /*
+            En celular el contenido vuelve
+            a ocupar todo el ancho porque
+            la pantalla es mucho más pequeña.
+            */
+
+            .hero-content {
+
+                width: 100%;
+
+                max-width: 600px;
+            }
+
+
             .hero h1 {
+
+                font-size:
+                    clamp(50px, 16vw, 80px);
+
                 letter-spacing: -3px;
             }
 
+
             .stats {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
+
             .stat {
+
                 border-right: none;
 
                 border-bottom:
-                    1px solid rgba(255,255,255,0.1);
+                    1px solid
+                    rgba(255,255,255,0.1);
             }
 
+
             .stat:last-child {
+
                 border-bottom: none;
             }
 
+
             .identity {
+
                 grid-template-columns: 1fr;
             }
 
+
             section {
-                padding: 80px 7%;
+
+                padding:
+                    80px 7%;
             }
 
+
             .section-title {
+
                 font-size: 36px;
             }
+
+
+            .twitch-box h2 {
+
+                font-size: 30px;
+            }
+
         }
 
     </style>
 </head>
 
+
 <body>
 
-    <!-- =========================
+
+    <!-- ========================================
          NAVEGACIÓN
-    ========================== -->
+    ======================================== -->
 
     <nav>
 
         <div class="nav-logo">
 
-            <img src="logo wolf.png" alt="Youh The Wolf">
+            <img
+                src="logo wolf.png"
+                alt="Logo Youh The Wolf"
+            >
 
-            <span>YOUH_THE_WOLF_7</span>
+            <span>
+                YOUH_THE_WOLF_7
+            </span>
 
         </div>
 
+
         <div class="nav-links">
 
-            <a href="#historia">Historia</a>
-            <a href="#logros">Logros</a>
-            <a href="#identidad">Identidad</a>
-            <a href="#twitch">Twitch</a>
+            <a href="#historia">
+                HISTORIA
+            </a>
+
+            <a href="#logros">
+                LOGROS
+            </a>
+
+            <a href="#identidad">
+                IDENTIDAD
+            </a>
+
+            <a href="#twitch">
+                TWITCH
+            </a>
 
         </div>
 
     </nav>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+
+    <!-- ========================================
+         PORTADA
+    ======================================== -->
 
     <header class="hero">
 
         <div class="hero-content">
 
             <div class="tag">
+
                 URUGUAY 🇺🇾 · WARZONE COMPETITIVE
+
             </div>
 
+
             <h1>
-                YOUH<br>
-                <span>THE WOLF</span>
+
+                YOUH
+
+                <br>
+
+                <span>
+                    THE WOLF
+                </span>
+
             </h1>
 
+
             <p class="hero-subtitle">
-                Jugador competitivo de Call of Duty: Warzone.
-                Representando a Uruguay en la escena competitiva
-                latinoamericana y persiguiendo un objetivo:
-                llegar cada vez más lejos.
+
+                Jugador competitivo de
+                Call of Duty: Warzone,
+                representando a Uruguay
+                en la escena competitiva
+                latinoamericana.
+
             </p>
+
 
             <div class="hero-buttons">
 
@@ -694,43 +991,65 @@
                     href="https://www.twitch.tv/youh_the_wolf_7"
                     target="_blank"
                 >
+
                     VER EN TWITCH
+
                 </a>
+
 
                 <a
                     class="btn btn-secondary"
                     href="#logros"
                 >
+
                     VER LOGROS
+
                 </a>
 
             </div>
 
+
             <div class="stats">
 
-                <div class="stat">
-
-                    <strong>TOP 50</strong>
-
-                    <span>Latin American WSOW</span>
-
-                </div>
 
                 <div class="stat">
 
-                    <strong>MVP</strong>
+                    <strong>
+                        TOP 50
+                    </strong>
 
-                    <span>Torneos Regionales</span>
+                    <span>
+                        LATIN AMERICAN WSOW
+                    </span>
 
                 </div>
+
 
                 <div class="stat">
 
-                    <strong>CAMPEÓN</strong>
+                    <strong>
+                        MVP
+                    </strong>
 
-                    <span>Sudamericano ZLeague</span>
+                    <span>
+                        TORNEOS REGIONALES
+                    </span>
 
                 </div>
+
+
+                <div class="stat">
+
+                    <strong>
+                        CAMPEÓN
+                    </strong>
+
+                    <span>
+                        SUDAMERICANO ZLEAGUE
+                    </span>
+
+                </div>
+
 
             </div>
 
@@ -739,52 +1058,93 @@
     </header>
 
 
-    <!-- =========================
+
+    <!-- ========================================
          HISTORIA
-    ========================== -->
+    ======================================== -->
 
     <section id="historia">
 
         <h2 class="section-title">
-            MI <span>HISTORIA</span>
+
+            MI
+            <span>
+                HISTORIA
+            </span>
+
         </h2>
 
+
         <p class="section-description">
+
             El camino competitivo no siempre fue fácil.
-            Pero cada caída terminó convirtiéndose en una razón
-            para volver más fuerte.
+            Pero cada caída terminó convirtiéndose
+            en una razón para volver más fuerte.
+
         </p>
+
 
         <div class="story">
 
             <p>
-                Mi nombre es Youh_The_Wolf_7 y soy jugador competitivo
-                de Call of Duty: Warzone, representando a Uruguay
-                en la escena competitiva latinoamericana.
+
+                Mi nombre es
+                <strong>
+                    Youh_The_Wolf_7
+                </strong>
+                y soy jugador competitivo de
+                Call of Duty: Warzone,
+                representando a Uruguay
+                en la escena competitiva
+                latinoamericana.
+
             </p>
 
+
             <p>
-                Durante mi carrera conseguí convertirme en
-                <strong>Campeón Sudamericano Regional de ZLeague</strong>
+
+                Durante mi carrera conseguí
+                convertirme en
+                <strong>
+                    Campeón Sudamericano Regional
+                    de ZLeague
+                </strong>
                 y obtener reconocimientos como
-                <strong>MVP en torneos regionales de América</strong>.
+                <strong>
+                    MVP en torneos regionales
+                    de América.
+                </strong>
+
             </p>
 
-            <p>
-                También logré clasificar dentro del
-                <strong>Top 50 de la Latin American WSOW</strong>.
-            </p>
 
             <p>
-                Hubo una caída. No llegué al presencial de WSOW.
+
+                También logré clasificar dentro
+                del
+                <strong>
+                    Top 50 de la Latin American WSOW.
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Hubo una caída.
+                No llegué al presencial de WSOW.
                 Pero esa historia no terminó ahí.
+
             </p>
 
+
             <p>
-                Hoy vuelvo con una mentalidad diferente:
-                no quiero simplemente competir.
-                Quiero demostrar que se puede volver a empezar,
-                mejorar y llegar más lejos.
+
+                Hoy vuelvo con una mentalidad diferente.
+                No quiero simplemente competir.
+                Quiero demostrar que se puede volver
+                a empezar, mejorar y llegar más lejos.
+
             </p>
 
         </div>
@@ -792,22 +1152,33 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- ========================================
          LOGROS
-    ========================== -->
+    ======================================== -->
 
     <section id="logros">
 
         <h2 class="section-title">
-            MIS <span>LOGROS</span>
+
+            MIS
+            <span>
+                LOGROS
+            </span>
+
         </h2>
 
+
         <p class="section-description">
-            Algunos de los momentos que marcaron mi camino
-            dentro de la competencia.
+
+            Algunos de los momentos que marcaron
+            mi camino dentro de la competencia.
+
         </p>
 
+
         <div class="achievements">
+
 
             <div class="achievement">
 
@@ -815,7 +1186,9 @@
                     01 · CAMPEÓN
                 </div>
 
-                <h3>Sudamericano Regional</h3>
+                <h3>
+                    Sudamericano Regional
+                </h3>
 
                 <p>
                     Campeón Sudamericano Regional
@@ -831,7 +1204,9 @@
                     02 · MVP
                 </div>
 
-                <h3>Jugador destacado</h3>
+                <h3>
+                    Jugador destacado
+                </h3>
 
                 <p>
                     MVP en torneos regionales
@@ -847,7 +1222,9 @@
                     03 · WSOW
                 </div>
 
-                <h3>Top 50 Latinoamérica</h3>
+                <h3>
+                    Top 50 Latinoamérica
+                </h3>
 
                 <p>
                     Clasificación dentro del
@@ -863,27 +1240,33 @@
                     04 · URUGUAY
                 </div>
 
-                <h3>Representando al país</h3>
+                <h3>
+                    Representando al país
+                </h3>
 
                 <p>
                     Compitiendo desde Uruguay
-                    frente a jugadores de toda Latinoamérica.
+                    frente a jugadores de toda
+                    Latinoamérica.
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- =========================
+
+    <!-- ========================================
          IDENTIDAD
-    ========================== -->
+    ======================================== -->
 
     <section id="identidad">
 
         <div class="identity">
+
 
             <div class="identity-logo">
 
@@ -898,92 +1281,142 @@
             <div class="identity-text">
 
                 <h2 class="section-title">
-                    MÁS QUE UN <span>JUGADOR</span>
+
+                    MÁS QUE UN
+                    <span>
+                        JUGADOR
+                    </span>
+
                 </h2>
 
+
                 <p>
-                    El lobo representa mentalidad, disciplina,
-                    resistencia y hambre de superación.
+
+                    El lobo representa mentalidad,
+                    disciplina, resistencia y hambre
+                    de superación.
+
                 </p>
+
 
                 <br>
 
+
                 <p>
-                    Mi objetivo no es solamente conseguir resultados.
-                    Quiero construir una comunidad, compartir lo que
-                    aprendo y demostrarle a otros jugadores que
-                    todavía pueden levantarse incluso después de caer.
+
+                    Mi objetivo no es solamente
+                    conseguir resultados.
+
+                    Quiero construir una comunidad,
+                    compartir lo que aprendo y
+                    demostrarle a otros jugadores
+                    que todavía pueden levantarse
+                    incluso después de caer.
+
                 </p>
+
 
                 <br>
 
+
                 <p>
+
                     <strong>
                         El camino continúa.
                     </strong>
+
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- =========================
+
+    <!-- ========================================
          SPONSORS
-    ========================== -->
+    ======================================== -->
 
     <section>
 
         <h2 class="section-title">
-            <span>PARTNERS</span>
+
+            <span>
+                PARTNERS
+            </span>
+
         </h2>
 
+
         <p class="section-description">
-            Marcas que forman parte de mi camino competitivo.
+
+            Marcas que forman parte de mi camino
+            competitivo.
+
         </p>
+
 
         <div class="sponsors">
 
-            <div class="sponsor">
-                MONSTER ENERGY
-            </div>
 
             <div class="sponsor">
-                REDRAGON
+
+                MONSTER ENERGY
+
             </div>
+
+
+            <div class="sponsor">
+
+                REDRAGON
+
+            </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- =========================
+
+    <!-- ========================================
          TWITCH
-    ========================== -->
+    ======================================== -->
 
     <section id="twitch">
 
         <div class="twitch-box">
 
             <h2>
-                NOS VEMOS EN <span style="color:#e50909;">
-                TWITCH
+
+                NOS VEMOS EN
+
+                <span>
+                    TWITCH
                 </span>
+
             </h2>
 
+
             <p>
-                Competencia, partidas, consejos y el camino
-                hacia el próximo nivel.
+
+                Competencia, partidas, consejos
+                y el camino hacia el próximo nivel.
+
             </p>
+
 
             <a
                 class="btn btn-primary"
                 href="https://www.twitch.tv/youh_the_wolf_7"
                 target="_blank"
             >
+
                 IR AL CANAL
+
             </a>
 
         </div>
@@ -991,9 +1424,10 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- ========================================
          FOOTER
-    ========================== -->
+    ======================================== -->
 
     <footer>
 
@@ -1002,22 +1436,32 @@
             alt="Youh The Wolf"
         >
 
+
         <p>
+
             © 2026 Youh_The_Wolf_7 · Uruguay 🇺🇾
+
         </p>
 
-        <p style="margin-top:8px;">
+
+        <p>
+
             Call of Duty: Warzone Competitive Player
+
         </p>
 
     </footer>
 
 
-    <!-- =========================
-         MÚSICA
-    ========================== -->
 
-    <audio id="music" loop>
+    <!-- ========================================
+         MÚSICA
+    ======================================== -->
+
+    <audio
+        id="music"
+        loop
+    >
 
         <source
             src="musica.mp3"
@@ -1031,15 +1475,23 @@
         class="music-button"
         id="musicButton"
         onclick="toggleMusic()"
+        aria-label="Activar o desactivar música"
     >
-        🔊
+
+        🔇
+
     </button>
+
 
 
     <script>
 
-        const music = document.getElementById("music");
-        const musicButton = document.getElementById("musicButton");
+        const music =
+            document.getElementById("music");
+
+        const musicButton =
+            document.getElementById("musicButton");
+
 
         function toggleMusic() {
 
@@ -1060,6 +1512,7 @@
         }
 
     </script>
+
 
 </body>
 </html>
