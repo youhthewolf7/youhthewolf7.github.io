@@ -1,1256 +1,1199 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Youh_The_Wolf_7 | Yoel Díaz | Call of Duty Warzone</title>
-
-  <meta name="description" content="Yoel Díaz, conocido como Youh_The_Wolf_7, jugador competitivo de Call of Duty Warzone de Uruguay. Challengers 2023, Atlanta FaZe Regional, campeón sudamericano de Z League y MVP en torneos regionales.">
-
-  <meta name="keywords" content="Youh_The_Wolf_7, Yoel Díaz, Call of Duty, Warzone, Uruguay, esports, competitivo, Z League, Challengers 2023, Atlanta FaZe Regional, WSOW">
-
-  <meta name="author" content="Yoel Díaz">
-
-  <meta property="og:title" content="Youh_The_Wolf_7 | Yoel Díaz">
-  <meta property="og:description" content="Jugador competitivo de Call of Duty Warzone representando a Uruguay.">
-  <meta property="og:type" content="website">
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #050505;
-      color: #ffffff;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* =========================
-       GENERAL
-    ========================= */
-
-    .container {
-      width: min(1100px, 92%);
-      margin: auto;
-    }
-
-    .red {
-      color: #e10600;
-    }
-
-    .section {
-      padding: 100px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-title span {
-      display: block;
-      color: #e10600;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 4px;
-      margin-bottom: 12px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(35px, 5vw, 58px);
-      line-height: 1;
-      font-weight: 900;
-    }
-
-    /* =========================
-       NAVBAR
-    ========================= */
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(5, 5, 5, 0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-container {
-      width: min(1100px, 92%);
-      margin: auto;
-      height: 70px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #e10600;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 13px;
-      font-weight: 700;
-      color: #bbb;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #e10600;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at center, rgba(225,6,0,0.13), transparent 45%),
-        #050505;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 700px;
-      height: 700px;
-      border-radius: 50%;
-      background: rgba(225,6,0,0.06);
-      filter: blur(100px);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 100px 20px 50px;
-    }
-
-    .hero-tag {
-      color: #e10600;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 5px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(48px, 9vw, 105px);
-      line-height: 0.95;
-      font-weight: 950;
-      letter-spacing: -3px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 span {
-      color: #e10600;
-    }
-
-    .hero-subtitle {
-      margin-top: 25px;
-      color: #aaa;
-      font-size: 18px;
-    }
-
-    .hero-buttons {
-      margin-top: 35px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      padding: 15px 28px;
-      border-radius: 4px;
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: 1px;
-      transition: 0.3s;
-    }
-
-    .button-red {
-      background: #e10600;
-      color: white;
-    }
-
-    .button-red:hover {
-      background: #ff1108;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(225,6,0,0.25);
-    }
-
-    .button-dark {
-      border: 1px solid #333;
-      color: white;
-    }
-
-    .button-dark:hover {
-      border-color: #e10600;
-      color: #e10600;
-    }
-
-    /* =========================
-       STATS
-    ========================= */
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-    }
-
-    .stat {
-      padding: 35px 15px;
-      text-align: center;
-      border-right: 1px solid #222;
-    }
-
-    .stat:last-child {
-      border-right: none;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 25px;
-      color: #fff;
-    }
-
-    .stat span {
-      color: #777;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    /* =========================
-       HISTORIA
-    ========================= */
-
-    .history-section {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(225,6,0,0.09), transparent 40%),
-        #050505;
-    }
-
-    .history-content {
-      max-width: 900px;
-      margin: auto;
-      color: #cfcfcf;
-      font-size: 18px;
-      line-height: 1.9;
-    }
-
-    .history-content p {
-      margin-bottom: 28px;
-    }
-
-    .history-intro {
-      font-size: 23px;
-      color: white;
-    }
-
-    .achievements-box {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin: 50px 0;
-    }
-
-    .achievement {
-      padding: 24px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-left: 3px solid #e10600;
-      transition: 0.3s;
-    }
-
-    .achievement:hover {
-      transform: translateY(-4px);
-      background: rgba(225,6,0,0.07);
-    }
-
-    .achievement-icon {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .achievement strong {
-      display: block;
-      color: white;
-      font-size: 16px;
-    }
-
-    .achievement small {
-      color: #888;
-      font-size: 13px;
-    }
-
-    .story-highlight {
-      text-align: center;
-      color: #888;
-      font-size: 21px;
-      margin-top: 70px;
-    }
-
-    .big-quote {
-      text-align: center;
-      padding: 50px 20px;
-      margin: 35px 0 45px;
-      border-top: 1px solid rgba(225,6,0,0.35);
-      border-bottom: 1px solid rgba(225,6,0,0.35);
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(225,6,0,0.07),
-        transparent
-      );
-    }
-
-    .big-quote span {
-      display: block;
-      color: #e10600;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 4px;
-      margin-bottom: 15px;
-    }
-
-    .big-quote h3 {
-      font-size: clamp(28px, 5vw, 48px);
-      color: white;
-    }
-
-    .near-text {
-      text-align: center;
-      margin-top: 45px;
-    }
-
-    .near-text strong {
-      font-size: 42px;
-      color: white;
-    }
-
-    .failure-text {
-      text-align: center;
-      color: #e10600;
-      font-size: 27px;
-      font-weight: 900;
-    }
-
-    .never-died {
-      text-align: center;
-      margin: 70px 0;
-    }
-
-    .never-died strong {
-      display: block;
-      font-size: 34px;
-      color: white;
-    }
-
-    .comeback {
-      text-align: center;
-      padding: 60px 30px;
-      margin: 70px 0;
-      background: linear-gradient(
-        135deg,
-        rgba(225,6,0,0.14),
-        rgba(0,0,0,0.8)
-      );
-      border: 1px solid rgba(225,6,0,0.3);
-      box-shadow: 0 0 70px rgba(225,6,0,0.06);
-    }
-
-    .comeback-label {
-      color: #e10600;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 5px;
-    }
-
-    .comeback h3 {
-      font-size: clamp(42px, 7vw, 75px);
-      color: white;
-      line-height: 1;
-      margin: 15px 0 30px;
-      font-weight: 950;
-    }
-
-    .comeback-main {
-      color: white;
-      font-size: 23px;
-    }
-
-    .final-message {
-      text-align: center;
-      margin: 90px 0 70px;
-    }
-
-    .final-message p {
-      color: #888;
-      font-size: 20px;
-    }
-
-    .final-message h3 {
-      margin-top: 15px;
-      font-size: clamp(32px, 6vw, 58px);
-      line-height: 1.1;
-    }
-
-    .final-message h3 span {
-      color: #e10600;
-    }
-
-    .legacy {
-      text-align: center;
-      margin: 70px 0;
-    }
-
-    .legacy p {
-      color: #777;
-      margin-bottom: 5px;
-    }
-
-    .legacy strong {
-      color: white;
-      font-size: 29px;
-    }
-
-    .signature {
-      text-align: center;
-      padding-top: 40px;
-      border-top: 1px solid #222;
-    }
-
-    .signature strong {
-      display: block;
-      font-size: 26px;
-    }
-
-    .signature small {
-      display: block;
-      color: #e10600;
-      margin-top: 8px;
-      font-weight: 900;
-      letter-spacing: 5px;
-    }
-
-    /* =========================
-       LOGROS
-    ========================= */
-
-    .achievements-section {
-      background: #080808;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      padding: 30px;
-      background: #0d0d0d;
-      border: 1px solid #202020;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #e10600;
-    }
-
-    .card-icon {
-      font-size: 35px;
-      margin-bottom: 20px;
-    }
-
-    .card h3 {
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #888;
-      font-size: 14px;
-    }
-
-    /* =========================
-       SPONSORS
-    ========================= */
-
-    .sponsors {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .sponsor {
-      padding: 45px;
-      text-align: center;
-      border: 1px solid #222;
-      background: #090909;
-      transition: 0.3s;
-    }
-
-    .sponsor:hover {
-      border-color: #e10600;
-      transform: translateY(-4px);
-    }
-
-    .sponsor h3 {
-      font-size: 25px;
-      margin-bottom: 8px;
-    }
-
-    .sponsor p {
-      color: #777;
-      font-size: 13px;
-    }
-
-    /* =========================
-       TWITCH
-    ========================= */
-
-    .twitch-box {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      padding: 60px 30px;
-      background:
-        radial-gradient(circle at center, rgba(225,6,0,0.12), transparent 60%),
-        #090909;
-      border: 1px solid #222;
-    }
-
-    .twitch-box h3 {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    .twitch-box p {
-      color: #888;
-      margin-bottom: 30px;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      padding: 60px 20px;
-      text-align: center;
-      background: #030303;
-      border-top: 1px solid #1a1a1a;
-    }
-
-    footer strong {
-      font-size: 22px;
-    }
-
-    footer p {
-      margin-top: 10px;
-      color: #666;
-      font-size: 13px;
-    }
-
-    .footer-red {
-      color: #e10600;
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 800px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stat:nth-child(2) {
-        border-right: none;
-      }
-
-      .stat:nth-child(3) {
-        border-top: 1px solid #222;
-      }
-
-      .stat:nth-child(4) {
-        border-top: 1px solid #222;
-      }
-
-      .achievements-box {
-        grid-template-columns: 1fr;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .sponsors {
-        grid-template-columns: 1fr;
-      }
-
-      .history-content {
-        font-size: 16px;
-      }
-
-      .history-intro {
-        font-size: 20px;
-      }
-
-      .near-text strong {
-        font-size: 34px;
-      }
-
-      .comeback {
-        padding: 45px 20px;
-      }
-
-      .comeback-main {
-        font-size: 19px;
-      }
-
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Youh_The_Wolf_7 | Yoel Díaz — Call of Duty: Warzone</title>
+
+    <meta name="description" content="Sitio web oficial de Youh_The_Wolf_7, Yoel Díaz. Jugador competitivo de Call of Duty: Warzone representando a Uruguay.">
+    <meta name="keywords" content="Youh The Wolf 7, Youh_The_Wolf_7, Yoel Díaz, Call of Duty, Warzone, Uruguay, esports, competitivo, Z League, Call of Duty Challengers">
+    <meta name="author" content="Yoel Díaz">
+
+    <meta property="og:title" content="Youh_The_Wolf_7 | Yoel Díaz">
+    <meta property="og:description" content="Jugador competitivo de Call of Duty: Warzone — Uruguay 🇺🇾">
+    <meta property="og:type" content="website">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background: rgba(5, 5, 5, 0.88);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            z-index: 1000;
+        }
+
+        .nav-logo img {
+            height: 52px;
+            max-width: 150px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff2020;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.70),
+                    rgba(0, 0, 0, 0.88)
+                ),
+                url("fondo wolf.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    circle at center,
+                    transparent 15%,
+                    rgba(0, 0, 0, 0.65) 100%
+                );
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .hero-logo {
+            width: 180px;
+            max-width: 60%;
+            margin-bottom: 25px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.35));
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 90px);
+            font-weight: 900;
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            text-shadow: 0 5px 30px rgba(0,0,0,0.8);
+        }
+
+        .hero h1 span {
+            color: #ff1616;
+        }
+
+        .hero-subtitle {
+            margin-top: 25px;
+            font-size: clamp(16px, 2vw, 22px);
+            color: #dddddd;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-country {
+            margin-top: 12px;
+            font-size: 18px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .btn-red {
+            background: #e50909;
+            color: white;
+        }
+
+        .btn-red:hover {
+            background: #ff2424;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.25);
+        }
+
+        .btn-outline {
+            border: 1px solid #ffffff;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: black;
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           WOLF AUDIO PLAYER
+        ========================= */
+
+        .music-player {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 2000;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 10px 14px;
+
+            background: rgba(5, 5, 5, 0.92);
+            border: 1px solid rgba(255, 22, 22, 0.55);
+            border-radius: 8px;
+
+            box-shadow:
+                0 0 20px rgba(255, 0, 0, 0.15),
+                0 10px 30px rgba(0, 0, 0, 0.5);
+
+            backdrop-filter: blur(10px);
+        }
+
+        .music-button {
+            width: 42px;
+            height: 42px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #e50909;
+            color: #ffffff;
+
+            font-size: 17px;
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .music-button:hover {
+            background: #ff2424;
+            transform: scale(1.08);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.45);
+        }
+
+        .music-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            min-width: 135px;
+        }
+
+        .music-title {
+            font-size: 11px;
+            font-weight: 900;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .music-status {
+            font-size: 9px;
+            color: #ff1616;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .volume-control {
+            width: 70px;
+            accent-color: #ff1616;
+            cursor: pointer;
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(32px, 5vw, 55px);
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .section-title span {
+            color: #ff1616;
+        }
+
+        .section-line {
+            width: 70px;
+            height: 4px;
+            background: #ff1616;
+            margin: 18px auto 0;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: #080808;
+            border-top: 1px solid #181818;
+            border-bottom: 1px solid #181818;
+        }
+
+        .stats-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 35px 15px;
+            background: #0d0d0d;
+            border: 1px solid #1e1e1e;
+            transition: 0.3s;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: #ff1616;
+        }
+
+        .stat-text {
+            margin-top: 8px;
+            color: #aaa;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           HISTORIA
+        ========================= */
+
+        .history {
+            background: #050505;
+        }
+
+        .history-content {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .history-content p {
+            color: #cccccc;
+            font-size: 18px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+
+        .history-content strong {
+            color: white;
+        }
+
+        .history-content h3 {
+            color: #ff1616;
+            font-size: 30px;
+            margin: 50px 0 20px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            border-left: 4px solid #ff1616;
+            padding: 25px 30px;
+            margin: 40px 0;
+            background: #0d0d0d;
+        }
+
+        .highlight p {
+            margin: 0;
+            font-size: 22px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .final-message {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .final-message h3 {
+            font-size: clamp(30px, 5vw, 55px);
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .final-message h4 {
+            font-size: clamp(25px, 4vw, 45px);
+            color: #ff1616;
+            font-weight: 900;
+        }
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================= */
+
+        .achievements {
+            background: #080808;
+        }
+
+        .achievements-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .achievement {
+            background: #0e0e0e;
+            border: 1px solid #1e1e1e;
+            padding: 35px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #ff1616;
+        }
+
+        .achievement:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 0, 0, 0.4);
+        }
+
+        .achievement h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .achievement p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           SPONSORS
+        ========================= */
+
+        .sponsors {
+            background: #050505;
+            text-align: center;
+        }
+
+        .sponsor-grid {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .sponsor {
+            min-width: 250px;
+            padding: 40px;
+            background: #0d0d0d;
+            border: 1px solid #202020;
+            font-size: 25px;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .sponsor:hover {
+            border-color: #ff1616;
+            transform: translateY(-5px);
+        }
+
+        .sponsor span {
+            color: #ff1616;
+        }
+
+        /* =========================
+           TWITCH
+        ========================= */
+
+        .twitch {
+            text-align: center;
+            background:
+                linear-gradient(
+                    rgba(10, 0, 0, 0.85),
+                    rgba(10, 0, 0, 0.95)
+                ),
+                url("fondo wolf.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .twitch p {
+            color: #bbb;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 20px;
+            text-align: center;
+            background: #020202;
+            border-top: 1px solid #171717;
+        }
+
+        footer .footer-logo img {
+            width: 100px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        footer strong {
+            color: #aaa;
+        }
+
+        .music-credit {
+            margin-top: 15px;
+            font-size: 11px;
+            color: #444;
+        }
+
+        .music-credit a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .music-credit a:hover {
+            color: #ff1616;
+        }
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                height: 65px;
+                padding: 0 20px;
+            }
+
+            .nav-logo img {
+                height: 42px;
+                max-width: 110px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+            }
+
+            .hero {
+                background-attachment: scroll;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 75px 20px;
+            }
+
+            .history-content p {
+                font-size: 16px;
+            }
+
+            .highlight {
+                padding: 20px;
+            }
+
+            .highlight p {
+                font-size: 18px;
+            }
+
+            .music-player {
+                right: 15px;
+                bottom: 15px;
+                padding: 8px 10px;
+            }
+
+            .music-info {
+                min-width: 110px;
+            }
+
+            .volume-control {
+                width: 55px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-logo {
+                width: 140px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .sponsor {
+                min-width: 100%;
+            }
+
+            .music-info {
+                min-width: 90px;
+            }
+
+            .music-title {
+                font-size: 9px;
+            }
+
+            .volume-control {
+                display: none;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================= -->
+    <!-- =========================
+         MUSIC PLAYER
+    ========================= -->
 
-  <nav>
-    <div class="nav-container">
+    <audio id="wolfMusic" loop preload="auto">
+        <source src="DDark - Shootin Stars [NCS Release].mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
 
-      <a href="#inicio" class="logo">
-        YOUH<span>_THE_WOLF_7</span>
-      </a>
+    <div class="music-player">
 
-      <ul class="nav-links">
-        <li><a href="#historia">Historia</a></li>
-        <li><a href="#logros">Logros</a></li>
-        <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#twitch">Twitch</a></li>
-      </ul>
+        <button
+            class="music-button"
+            id="musicButton"
+            onclick="toggleMusic()"
+            aria-label="Reproducir música"
+        >
+            ▶
+        </button>
+
+        <div class="music-info">
+            <div class="music-title">
+                WOLF AUDIO
+            </div>
+
+            <div class="music-status" id="musicStatus">
+                MUSIC OFF
+            </div>
+        </div>
+
+        <input
+            type="range"
+            class="volume-control"
+            id="volumeControl"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.35"
+            aria-label="Volumen"
+        >
 
     </div>
-  </nav>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
-  <section class="hero" id="inicio">
+    <nav>
 
-    <div class="hero-content">
+        <a href="#inicio" class="nav-logo">
+            <img src="logo wolf.jpg" alt="Youh The Wolf 7 Logo">
+        </a>
 
-      <div class="hero-tag">
-        🇺🇾 URUGUAY · CALL OF DUTY · WARZONE
-      </div>
+        <ul class="nav-links">
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#logros">Logros</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#twitch">Twitch</a></li>
+        </ul>
 
-      <h1>
-        YOUH_<span>THE</span>_WOLF_7
-      </h1>
+    </nav>
 
-      <p class="hero-subtitle">
-        Competitive Call of Duty Player · Yoel Díaz
-      </p>
 
-      <div class="hero-buttons">
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <img
+                src="logo wolf.jpg"
+                alt="Youh The Wolf 7"
+                class="hero-logo"
+            >
+
+            <h1>
+                YOUH_<span>THE_WOLF_7</span>
+            </h1>
+
+            <div class="hero-subtitle">
+                Competitive Call of Duty: Warzone Player
+            </div>
+
+            <div class="hero-country">
+                🇺🇾 Uruguay
+            </div>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="https://www.twitch.tv/youh_the_wolf_7"
+                    target="_blank"
+                    class="btn btn-red"
+                >
+                    Ver Twitch
+                </a>
+
+                <a
+                    href="#historia"
+                    class="btn btn-outline"
+                >
+                    Mi historia
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATS
+    ========================= -->
+
+    <section class="stats">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+                <div class="stat-number">2013</div>
+                <div class="stat-text">Inicio en Call of Duty</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number">10+</div>
+                <div class="stat-text">Años de experiencia</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number">MVP</div>
+                <div class="stat-text">Torneos regionales</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number">🇺🇾</div>
+                <div class="stat-text">Representando Uruguay</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HISTORIA
+    ========================= -->
+
+    <section class="history" id="historia">
+
+        <div class="section-title">
+
+            <h2>Mi <span>Historia</span></h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+        <div class="history-content">
+
+            <p>
+                <strong>Mi nombre es Yoel Díaz. En la escena competitiva me conocen como Youh_The_Wolf_7.</strong>
+            </p>
+
+            <p>
+                Mi historia con Call of Duty comenzó en <strong>2013</strong>.
+                Lo que empezó como un sueño de niño terminó convirtiéndose
+                en una parte fundamental de mi vida.
+            </p>
+
+            <p>
+                Durante más de una década recorrí el camino competitivo,
+                enfrentando sacrificios, victorias, derrotas y momentos
+                que pusieron a prueba cuánto estaba dispuesto a luchar
+                por mis objetivos.
+            </p>
+
+            <p>
+                Desde <strong>Uruguay 🇺🇾</strong>, tuve la oportunidad de
+                competir al más alto nivel dentro de la escena de Call of Duty
+                en Latinoamérica y América.
+            </p>
+
+            <p>
+                Fui <strong>participante de Call of Duty Challengers 2023</strong>,
+                formé parte de <strong>Atlanta FaZe Regional</strong>,
+                me convertí en <strong>Campeón Sudamericano Regional de Z League</strong>
+                y fui reconocido como <strong>MVP / Mejor Jugador en torneos
+                regionales de América</strong>.
+            </p>
+
+            <h3>El objetivo que faltaba</h3>
+
+            <p>
+                Pero había un objetivo que significaba algo diferente para mí.
+            </p>
+
+            <div class="highlight">
+
+                <p>
+                    Llegar al presencial de la World Series of Warzone.
+                </p>
+
+            </div>
+
+            <p>
+                Trabajé, competí y dejé todo intentando alcanzar ese escenario.
+            </p>
+
+            <p>
+                <strong>Estuve cerca.</strong>
+            </p>
+
+            <p>
+                Pero no lo conseguí.
+            </p>
+
+            <p>
+                Y después de eso, me alejé del competitivo.
+            </p>
+
+            <p>
+                Durante un tiempo, el sueño quedó en pausa.
+            </p>
+
+            <p>
+                <strong>Pero nunca murió.</strong>
+            </p>
+
+            <h3>🔥 Hoy estoy de vuelta.</h3>
+
+            <p>
+                No regreso para demostrar que nunca caí.
+            </p>
+
+            <p>
+                <strong>Regreso para demostrar que pude levantarme.</strong>
+            </p>
+
+            <p>
+                Vuelvo con la misma ambición, pero con una experiencia
+                que antes no tenía.
+            </p>
+
+            <p>
+                Quiero volver a competir contra los mejores.
+                <br>
+                Quiero representar a Uruguay.
+                <br>
+                Quiero volver a los grandes escenarios.
+                <br>
+                Y, sobre todo, quiero <strong>terminar lo que empecé.</strong>
+            </p>
+
+            <div class="final-message">
+
+                <h3>
+                    NO QUIERO QUEDARME CERCA.
+                </h3>
+
+                <h4>
+                    QUIERO TERMINAR LO QUE EMPECÉ.
+                </h4>
+
+            </div>
+
+            <div class="highlight">
+
+                <p>
+                    La caída fue parte de mi historia.
+                    El regreso será parte de mi legado.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOGROS
+    ========================= -->
+
+    <section class="achievements" id="logros">
+
+        <div class="section-title">
+
+            <h2>Trayectoria <span>Competitiva</span></h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+        <div class="achievements-grid">
+
+            <div class="achievement">
+
+                <h3>🏆 Campeón Sudamericano</h3>
+
+                <p>
+                    Campeón del Regional Sudamericano de Z League,
+                    representando a la escena competitiva de Sudamérica.
+                </p>
+
+            </div>
+
+            <div class="achievement">
+
+                <h3>⭐ MVP Regional</h3>
+
+                <p>
+                    Reconocido como MVP / Mejor Jugador en torneos
+                    regionales de América.
+                </p>
+
+            </div>
+
+            <div class="achievement">
+
+                <h3>🎮 Call of Duty Challengers 2023</h3>
+
+                <p>
+                    Participación en Call of Duty Challengers 2023,
+                    compitiendo dentro del circuito competitivo de Call of Duty.
+                </p>
+
+            </div>
+
+            <div class="achievement">
+
+                <h3>🐺 Atlanta FaZe Regional</h3>
+
+                <p>
+                    Experiencia competitiva formando parte de Atlanta FaZe Regional.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SPONSORS
+    ========================= -->
+
+    <section class="sponsors" id="sponsors">
+
+        <div class="section-title">
+
+            <h2>Partners & <span>Sponsors</span></h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+        <div class="sponsor-grid">
+
+            <div class="sponsor">
+                Monster <span>Energy</span>
+            </div>
+
+            <div class="sponsor">
+                <span>Redragon</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TWITCH
+    ========================= -->
+
+    <section class="twitch" id="twitch">
+
+        <div class="section-title">
+
+            <h2>Seguime en <span>Twitch</span></h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+        <p>
+            Competencia, Warzone, consejos y el camino de regreso al máximo nivel.
+        </p>
 
         <a
-          href="https://www.twitch.tv/youh_the_wolf_7"
-          target="_blank"
-          class="button button-red"
+            href="https://www.twitch.tv/youh_the_wolf_7"
+            target="_blank"
+            class="btn btn-red"
         >
-          VER EN TWITCH
+            twitch.tv/youh_the_wolf_7
         </a>
 
-        <a href="#historia" class="button button-dark">
-          CONOCER MI HISTORIA
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- =========================
-       STATS
-  ========================= -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-  <section class="container">
+    <footer>
 
-    <div class="stats">
+        <div class="footer-logo">
 
-      <div class="stat">
-        <strong>2013</strong>
-        <span>Inicio</span>
-      </div>
-
-      <div class="stat">
-        <strong>🇺🇾</strong>
-        <span>Uruguay</span>
-      </div>
-
-      <div class="stat">
-        <strong>COD</strong>
-        <span>Warzone</span>
-      </div>
-
-      <div class="stat">
-        <strong>🐺</strong>
-        <span>Youh_The_Wolf_7</span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       HISTORIA
-  ========================= -->
-
-  <section class="section history-section" id="historia">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <span>🐺 MI HISTORIA</span>
-
-        <h2>
-          La caída fue parte de mi historia.
-        </h2>
-
-      </div>
-
-
-      <div class="history-content">
-
-        <p class="history-intro">
-          <strong>Mi nombre es Yoel Díaz.</strong>
-          En la escena competitiva me conocen como
-          <strong class="red">Youh_The_Wolf_7.</strong>
-        </p>
-
-        <p>
-          Mi historia con Call of Duty comenzó en
-          <strong>2013</strong>.
-          Lo que empezó como un sueño de niño terminó convirtiéndose
-          en una parte fundamental de mi vida.
-        </p>
-
-        <p>
-          Durante más de una década recorrí el camino competitivo,
-          enfrentando sacrificios, victorias, derrotas y momentos que
-          pusieron a prueba cuánto estaba dispuesto a luchar por mis objetivos.
-        </p>
-
-        <p>
-          Desde <strong>Uruguay 🇺🇾</strong>, tuve la oportunidad de competir
-          al más alto nivel dentro de la escena de Call of Duty en
-          Latinoamérica y América.
-        </p>
-
-
-        <!-- LOGROS -->
-
-        <div class="achievements-box">
-
-          <div class="achievement">
-
-            <div class="achievement-icon">🎮</div>
-
-            <strong>
-              Call of Duty Challengers 2023
-            </strong>
-
-            <small>
-              Participante
-            </small>
-
-          </div>
-
-
-          <div class="achievement">
-
-            <div class="achievement-icon">⚡</div>
-
-            <strong>
-              Atlanta FaZe Regional
-            </strong>
-
-            <small>
-              Experiencia competitiva
-            </small>
-
-          </div>
-
-
-          <div class="achievement">
-
-            <div class="achievement-icon">🏆</div>
-
-            <strong>
-              South American Z League
-            </strong>
-
-            <small>
-              Campeón Regional
-            </small>
-
-          </div>
-
-
-          <div class="achievement">
-
-            <div class="achievement-icon">🥇</div>
-
-            <strong>
-              MVP / Mejor Jugador
-            </strong>
-
-            <small>
-              Torneos regionales de América
-            </small>
-
-          </div>
+            <img
+                src="logo wolf.jpg"
+                alt="Youh The Wolf 7"
+            >
 
         </div>
 
-
-        <p class="story-highlight">
-          Pero había un objetivo que significaba algo diferente para mí.
+        <p>
+            <strong>YOUH_THE_WOLF_7 🇺🇾</strong>
         </p>
-
-
-        <div class="big-quote">
-
-          <span>
-            WORLD SERIES OF WARZONE
-          </span>
-
-          <h3>
-            “Llegar al presencial.”
-          </h3>
-
-        </div>
-
 
         <p>
-          Trabajé, competí y dejé todo intentando alcanzar ese escenario.
+            Professional Call of Duty: Warzone Player
         </p>
-
-
-        <p class="near-text">
-          <strong>Estuve cerca.</strong>
-        </p>
-
-
-        <p class="failure-text">
-          Pero no lo conseguí.
-        </p>
-
 
         <p>
-          Y después de eso, me alejé del competitivo.
+            © 2026 Yoel Díaz. Todos los derechos reservados.
         </p>
 
-
-        <p>
-          Durante un tiempo, el sueño quedó en pausa.
-        </p>
-
-
-        <div class="never-died">
-
-          <span>🔥</span>
-
-          <strong>
-            Pero nunca murió.
-          </strong>
-
-        </div>
-
-
-        <!-- REGRESO -->
-
-        <div class="comeback">
-
-          <span class="comeback-label">
-            EL REGRESO
-          </span>
-
-          <h3>
-            Hoy estoy de vuelta.
-          </h3>
-
-          <p>
-            No regreso para demostrar que nunca caí.
-          </p>
-
-          <p class="comeback-main">
-            <strong>
-              Regreso para demostrar que pude levantarme.
-            </strong>
-          </p>
-
-        </div>
-
-
-        <p>
-          Vuelvo con la misma ambición,
-          pero con una experiencia que antes no tenía.
-        </p>
-
-
-        <p>
-          Quiero volver a competir contra los mejores.<br>
-          Quiero representar a Uruguay.<br>
-          Quiero volver a los grandes escenarios.<br>
-          Y, sobre todo, quiero
-          <strong>terminar lo que empecé.</strong>
-        </p>
-
-
-        <!-- FRASE FINAL -->
-
-        <div class="final-message">
-
-          <p>
-            Porque no quiero ser uno más.
-          </p>
-
-          <h3>
-            NO QUIERO QUEDARME CERCA.
+        <p class="music-credit">
+            Music: Aero Chord feat. DDARK - Shootin Stars [NCS Release]
             <br>
-            <span>
-              QUIERO TERMINAR LO QUE EMPECÉ.
-            </span>
-          </h3>
-
-        </div>
-
-
-        <div class="legacy">
-
-          <p>
-            La caída fue parte de mi historia.
-          </p>
-
-          <strong>
-            El regreso será parte de mi legado.
-          </strong>
-
-        </div>
-
-
-        <div class="signature">
-
-          <strong>
-            YOUH_THE_WOLF_7 🇺🇾 🐺
-          </strong>
-
-          <small>
-            THE STORY ISN'T OVER.
-          </small>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       LOGROS
-  ========================= -->
-
-  <section class="section achievements-section" id="logros">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <span>🏆 COMPETITIVO</span>
-
-        <h2>
-          Trayectoria
-        </h2>
-
-      </div>
-
-
-      <div class="cards">
-
-        <div class="card">
-
-          <div class="card-icon">🎮</div>
-
-          <h3>
-            Call of Duty Challengers 2023
-          </h3>
-
-          <p>
-            Participación en la escena competitiva
-            de Call of Duty.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">⚡</div>
-
-          <h3>
-            Atlanta FaZe Regional
-          </h3>
-
-          <p>
-            Experiencia competitiva dentro del circuito
-            regional.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">🏆</div>
-
-          <h3>
-            Campeón Sudamericano
-          </h3>
-
-          <p>
-            Campeón Regional Sudamericano
-            de Z League.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">🥇</div>
-
-          <h3>
-            MVP Regional
-          </h3>
-
-          <p>
-            Reconocido como MVP / Mejor Jugador
-            en torneos regionales de América.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">🇺🇾</div>
-
-          <h3>
-            Representando Uruguay
-          </h3>
-
-          <p>
-            Representando a Uruguay dentro
-            de la escena competitiva latinoamericana.
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">🔥</div>
-
-          <h3>
-            The Comeback
-          </h3>
-
-          <p>
-            Un nuevo capítulo comienza.
-            La historia todavía no terminó.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       SPONSORS
-  ========================= -->
-
-  <section class="section" id="sponsors">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <span>🤝 PARTNERS</span>
-
-        <h2>
-          Sponsors
-        </h2>
-
-      </div>
-
-
-      <div class="sponsors">
-
-        <div class="sponsor">
-
-          <h3>
-            MONSTER ENERGY
-          </h3>
-
-          <p>
-            Sponsor / Partner
-          </p>
-
-        </div>
-
-
-        <div class="sponsor">
-
-          <h3>
-            REDRAGON
-          </h3>
-
-          <p>
-            Sponsor / Partner
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       TWITCH
-  ========================= -->
-
-  <section class="section" id="twitch">
-
-    <div class="container">
-
-      <div class="twitch-box">
-
-        <h3>
-          🔴 Seguime en Twitch
-        </h3>
-
-        <p>
-          Competitivo, Warzone, contenido y el camino
-          de regreso a lo más alto.
+            Music provided by NoCopyrightSounds
         </p>
 
-        <a
-          href="https://www.twitch.tv/youh_the_wolf_7"
-          target="_blank"
-          class="button button-red"
-        >
-          IR A MI TWITCH
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
+    </footer>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+    <!-- =========================
+         MUSIC SCRIPT
+    ========================= -->
 
-  <footer>
+    <script>
 
-    <strong>
-      YOUH<span class="footer-red">_THE_WOLF_7</span> 🐺
-    </strong>
+        const music = document.getElementById("wolfMusic");
+        const musicButton = document.getElementById("musicButton");
+        const musicStatus = document.getElementById("musicStatus");
+        const volumeControl = document.getElementById("volumeControl");
 
-    <p>
-      Yoel Díaz · Uruguay 🇺🇾 · Call of Duty Warzone
-    </p>
+        // Volumen inicial
+        music.volume = 0.35;
 
-    <p>
-      © 2026 Youh_The_Wolf_7. Todos los derechos reservados.
-    </p>
+        function toggleMusic() {
 
-  </footer>
+            if (music.paused) {
 
+                music.play()
+                    .then(() => {
+
+                        musicButton.textContent = "❚❚";
+                        musicStatus.textContent = "MUSIC ON";
+
+                    })
+                    .catch((error) => {
+
+                        console.log("No se pudo reproducir la música:", error);
+
+                    });
+
+            } else {
+
+                music.pause();
+
+                musicButton.textContent = "▶";
+                musicStatus.textContent = "MUSIC OFF";
+            }
+        }
+
+        // Control de volumen
+        volumeControl.addEventListener("input", function () {
+
+            music.volume = this.value;
+
+        });
+
+        // Si la canción termina, vuelve a empezar
+        music.addEventListener("ended", function () {
+
+            music.currentTime = 0;
+            music.play();
+
+        });
+
+    </script>
 
 </body>
 </html>
