@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Youh The Wolf 7 | Call of Duty</title>
-  <meta name="description" content="Página oficial de Youh The Wolf 7. Call of Duty, competitivo, Resurgimiento, contenido gaming y Dubby.">
   <meta name="theme-color" content="#080808">
+
+  <title>Youh The Wolf 7 | Official Gaming</title>
+  <meta name="description" content="Página oficial de Youh The Wolf 7. Call of Duty, competitivo, contenido gaming, comunidad y Dubby.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +18,10 @@
       --bg: #080808;
       --panel: #111111;
       --red: #e50922;
-      --white: #f5f5f5;
-      --muted: #a3a3a3;
-      --border: rgba(255,255,255,.10);
+      --red-dark: #970719;
+      --white: #f4f4f4;
+      --muted: #a4a4a4;
+      --border: rgba(255,255,255,.12);
     }
 
     * {
@@ -38,8 +39,13 @@
       background: var(--bg);
       color: var(--white);
       font-family: 'Inter', sans-serif;
-      line-height: 1.6;
+      line-height: 1.65;
       overflow-x: hidden;
+    }
+
+    body::selection {
+      background: var(--red);
+      color: white;
     }
 
     a {
@@ -47,45 +53,95 @@
       text-decoration: none;
     }
 
+    img, video {
+      max-width: 100%;
+    }
+
     button {
       font: inherit;
     }
 
     .container {
-      width: min(1120px, 90%);
-      margin-inline: auto;
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-dark {
+      background: #0d0d0d;
+      border-block: 1px solid rgba(255,255,255,.05);
     }
 
     .eyebrow {
       color: var(--red);
-      font-size: .78rem;
+      font-size: .76rem;
       font-weight: 800;
       letter-spacing: 4px;
       text-transform: uppercase;
     }
 
-    .section {
-      padding: 95px 0;
-    }
-
     .section-title {
-      margin: 10px 0 18px;
+      margin: 10px 0 20px;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
       line-height: .98;
       text-transform: uppercase;
     }
 
-    .section-description {
-      max-width: 650px;
-      color: var(--muted);
-    }
-
-    .red {
+    .section-title span {
       color: var(--red);
     }
 
-    /* NAVEGACIÓN */
+    .section-intro {
+      max-width: 700px;
+      color: var(--muted);
+    }
+
+    .section-heading {
+      margin-bottom: 42px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 49px;
+      padding: 13px 22px;
+      border: 1px solid var(--border);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-red {
+      background: var(--red);
+      border-color: var(--red);
+      color: white;
+    }
+
+    .btn-red:hover {
+      background: #bd071b;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--red);
+      color: #ff7b89;
+    }
+
+    /* NAVBAR */
 
     .navbar {
       position: sticky;
@@ -93,23 +149,34 @@
       z-index: 100;
       background: rgba(8,8,8,.94);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(16px);
     }
 
     .nav-inner {
-      min-height: 72px;
+      min-height: 76px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      justify-content: space-between;
+      gap: 25px;
     }
 
     .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 900;
-      letter-spacing: 1px;
+      line-height: 1;
       white-space: nowrap;
+    }
+
+    .brand img {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(229,9,34,.7);
     }
 
     .brand span {
@@ -118,16 +185,17 @@
 
     .nav-links {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: flex-end;
-      gap: 22px;
-      font-size: .8rem;
-      font-weight: 700;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: .73rem;
+      font-weight: 800;
       text-transform: uppercase;
     }
 
     .nav-links a {
+      color: #d5d5d5;
       transition: color .2s;
     }
 
@@ -135,286 +203,508 @@
       color: var(--red);
     }
 
-    /* PORTADA */
+    /* HERO */
 
     .hero {
-      min-height: 650px;
-      min-height: min(800px, calc(100svh - 72px));
       position: relative;
+      min-height: 740px;
+      min-height: min(850px, calc(100svh - 76px));
       display: flex;
       align-items: center;
+      isolation: isolate;
       overflow: hidden;
+      background: #080808;
+    }
+
+    .hero-bg {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      opacity: .48;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
       background:
-        radial-gradient(ellipse at 75% 40%, rgba(229,9,34,.17), transparent 45%),
-        linear-gradient(110deg, #080808 30%, #151010 100%);
+        linear-gradient(90deg, #080808 2%, rgba(8,8,8,.88) 35%, rgba(8,8,8,.25) 100%),
+        linear-gradient(0deg, #080808 0%, transparent 35%, rgba(0,0,0,.15) 100%);
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      inset: 0;
+      z-index: -1;
+      right: -140px;
+      top: 5%;
+      width: 420px;
+      height: 90%;
+      background: rgba(229,9,34,.12);
+      filter: blur(100px);
       pointer-events: none;
-      background: linear-gradient(90deg, #080808 5%, transparent 100%);
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 85px 0;
+      padding: 100px 0;
+      max-width: 850px;
     }
 
-    .hero-kicker {
-      display: inline-block;
-      margin-bottom: 22px;
-      padding: 7px 12px;
-      border: 1px solid rgba(229,9,34,.55);
-      color: #ff6677;
-      font-size: .75rem;
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 13px;
+      border: 1px solid rgba(229,9,34,.6);
+      background: rgba(229,9,34,.09);
+      color: #ff8793;
+      font-size: .73rem;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
+    .hero-tag::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 12px var(--red);
+    }
+
     .hero h1 {
-      max-width: 850px;
+      margin-top: 28px;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(4rem, 11vw, 8.5rem);
+      font-size: clamp(4.7rem, 12vw, 9.8rem);
       font-weight: 900;
-      line-height: .78;
+      line-height: .76;
       letter-spacing: -2px;
       text-transform: uppercase;
     }
 
     .hero h1 span {
       display: block;
-      margin-top: 15px;
+      margin-top: 18px;
       color: var(--red);
+      text-shadow: 0 0 35px rgba(229,9,34,.15);
     }
 
-    .hero-text {
-      max-width: 560px;
-      margin: 30px 0;
-      color: #c3c3c3;
-      font-size: 1rem;
+    .hero-description {
+      max-width: 580px;
+      margin: 32px 0;
+      color: #c6c6c6;
+      font-size: .98rem;
     }
 
-    .buttons {
+    .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 13px;
     }
 
-    .btn {
-      display: inline-flex;
-      justify-content: center;
+    .hero-bottom {
+      display: flex;
       align-items: center;
-      gap: 9px;
-      min-height: 48px;
-      padding: 13px 22px;
-      border: 1px solid var(--border);
-      font-size: .82rem;
-      font-weight: 800;
+      gap: 13px;
+      margin-top: 48px;
+      color: #a8a8a8;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      transition: transform .2s, background .2s;
-      cursor: pointer;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .btn-primary {
+    .hero-bottom .line {
+      width: 45px;
+      height: 2px;
       background: var(--red);
-      border-color: var(--red);
-      color: white;
     }
 
-    .btn-primary:hover {
-      background: #bd071b;
-    }
+    /* STRIP */
 
-    .btn-outline:hover {
-      border-color: var(--red);
-    }
-
-    /* ESTADÍSTICAS */
-
-    .stats {
+    .identity-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      background: #101010;
       border-block: 1px solid var(--border);
-      background: #0d0d0d;
     }
 
-    .stat {
-      padding: 30px 15px;
+    .identity-item {
+      padding: 27px 18px;
       text-align: center;
     }
 
-    .stat + .stat {
+    .identity-item + .identity-item {
       border-left: 1px solid var(--border);
     }
 
-    .stat strong {
+    .identity-item strong {
       display: block;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(1.9rem, 5vw, 3rem);
-      line-height: 1.1;
+      font-size: 1.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
     }
 
-    .stat span {
+    .identity-item span {
       color: var(--muted);
-      font-size: .75rem;
+      font-size: .7rem;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
+    }
+
+    /* STORY */
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .story-visual {
+      position: relative;
+      min-height: 460px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(ellipse at center, rgba(229,9,34,.22), transparent 55%),
+        linear-gradient(145deg, #181818, #080808);
+    }
+
+    .story-visual::before,
+    .story-visual::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border: 1px solid rgba(229,9,34,.25);
+      transform: rotate(45deg);
+    }
+
+    .story-visual::after {
+      width: 320px;
+      height: 320px;
+      border-color: rgba(255,255,255,.07);
+    }
+
+    .story-visual img {
+      position: relative;
+      z-index: 2;
+      width: 70%;
+      max-height: 330px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 35px rgba(229,9,34,.16));
+    }
+
+    .story-stamp {
+      position: absolute;
+      z-index: 3;
+      bottom: 22px;
+      left: 22px;
+      padding: 8px 12px;
+      background: var(--red);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
       letter-spacing: 1px;
     }
 
-    /* SOBRE MÍ */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
+    .story-copy p {
+      margin-bottom: 17px;
+      color: #bcbcbc;
+      font-size: .93rem;
     }
 
-    .about-panel {
-      min-height: 330px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 30px;
-      border: 1px solid var(--border);
-      background:
-        radial-gradient(ellipse at top right, rgba(229,9,34,.2), transparent 60%),
-        linear-gradient(145deg, #191919, #0c0c0c);
-    }
-
-    .wolf-mark {
-      margin-bottom: 20px;
+    .story-signature {
+      display: inline-block;
+      margin-top: 8px;
       color: var(--red);
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(4rem, 10vw, 7rem);
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    /* JOURNEY */
+
+    .journey-list {
+      margin-top: 36px;
+      border-top: 1px solid var(--border);
+    }
+
+    .journey-item {
+      display: grid;
+      grid-template-columns: 75px 1fr;
+      gap: 25px;
+      padding: 27px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .journey-number {
+      color: var(--red);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.4rem;
       font-weight: 900;
       line-height: 1;
     }
 
-    .about-panel p {
+    .journey-item h3 {
+      margin-bottom: 6px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+    }
+
+    .journey-item p {
+      max-width: 720px;
       color: var(--muted);
+      font-size: .9rem;
     }
 
-    .about-copy p {
-      margin-bottom: 16px;
-      color: #b8b8b8;
+    /* HIGHLIGHTS */
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 36px;
     }
 
-    /* COMPETITIVO */
-
-    .competitive {
-      background: #0d0d0d;
-      border-block: 1px solid var(--border);
+    .highlight-card {
+      position: relative;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      padding: 25px;
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(ellipse at 80% 15%, rgba(229,9,34,.22), transparent 50%),
+        linear-gradient(145deg, #191919, #0a0a0a);
+      transition: border-color .25s, transform .25s;
     }
 
-    .feature-grid {
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--red);
+    }
+
+    .highlight-index {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      color: rgba(255,255,255,.06);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 7rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .highlight-card .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: .67rem;
+      letter-spacing: 2px;
+    }
+
+    .highlight-card h3 {
+      position: relative;
+      z-index: 1;
+      margin: 10px 0;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .highlight-card p {
+      position: relative;
+      z-index: 1;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    /* ACHIEVEMENTS / VALUES */
+
+    .values-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
       margin-top: 35px;
     }
 
-    .feature {
-      padding: 28px;
-      background: var(--panel);
+    .value-card {
+      padding: 27px;
       border: 1px solid var(--border);
-      transition: border-color .2s, transform .2s;
+      background: var(--panel);
     }
 
-    .feature:hover {
-      transform: translateY(-4px);
-      border-color: var(--red);
-    }
-
-    .feature-number {
+    .value-icon {
+      display: inline-flex;
+      width: 43px;
+      height: 43px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 1px solid rgba(229,9,34,.55);
       color: var(--red);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 2.3rem;
-      font-weight: 900;
+      font-size: 1.25rem;
     }
 
-    .feature h3 {
-      margin: 10px 0;
+    .value-card h3 {
+      margin-bottom: 9px;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.7rem;
+      font-size: 1.65rem;
       text-transform: uppercase;
     }
 
-    .feature p {
+    .value-card p {
       color: var(--muted);
-      font-size: .9rem;
+      font-size: .86rem;
+    }
+
+    /* SPONSORS */
+
+    .sponsor-area {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
+    .sponsor-card {
+      min-height: 155px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 25px;
+      border: 1px solid var(--border);
+      background: #101010;
+      text-align: center;
+      transition: border-color .2s;
+    }
+
+    .sponsor-card:hover {
+      border-color: var(--red);
+    }
+
+    .sponsor-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2.3rem);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .sponsor-name.monster {
+      color: #8ecf4a;
+    }
+
+    .sponsor-name.redragon {
+      color: #f04b4b;
+    }
+
+    .sponsor-name.dubby {
+      color: white;
+    }
+
+    .sponsor-card small {
+      color: var(--muted);
+      font-size: .7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     /* DUBBY */
 
     .dubby-section {
-      padding: 90px 0;
+      padding: 95px 0;
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(229,9,34,.1), transparent 65%),
+        #080808;
     }
 
-    .dubby-card {
+    .dubby-banner {
       position: relative;
+      isolation: isolate;
       overflow: hidden;
-      padding: clamp(28px, 6vw, 65px);
-      border: 1px solid rgba(255,255,255,.14);
+      padding: clamp(35px, 7vw, 80px) 24px;
+      border: 1px solid rgba(229,9,34,.45);
       background: #111;
       text-align: center;
     }
 
     .dubby-video {
       position: absolute;
+      z-index: -2;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: .32;
+      opacity: .36;
     }
 
-    .dubby-overlay {
+    .dubby-banner::before {
+      content: "";
       position: absolute;
+      z-index: -1;
       inset: 0;
-      background: linear-gradient(90deg, rgba(0,0,0,.91), rgba(0,0,0,.67));
+      background: linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.65), rgba(0,0,0,.9));
     }
 
     .dubby-content {
-      position: relative;
-      z-index: 2;
+      max-width: 780px;
+      margin: auto;
     }
 
     .dubby-logo {
-      max-width: min(230px, 70%);
-      max-height: 110px;
+      display: block;
+      width: min(210px, 65%);
+      max-height: 100px;
+      margin: 0 auto 24px;
       object-fit: contain;
-      margin-bottom: 22px;
     }
 
-    .dubby-card h2 {
-      margin: 12px 0;
+    .dubby-title {
+      margin: 17px 0;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      line-height: .95;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 900;
+      line-height: .82;
       text-transform: uppercase;
     }
 
-    .discount {
-      margin: 18px 0;
+    .dubby-title span {
       color: var(--red);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(2.5rem, 7vw, 4.5rem);
-      font-weight: 900;
     }
 
-    .dubby-content > p {
-      max-width: 570px;
-      margin: 0 auto 22px;
+    .dubby-discount {
+      margin: 24px 0 10px;
+      color: var(--red);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      font-weight: 900;
+      line-height: 1;
+      text-shadow: 0 0 25px rgba(229,9,34,.15);
+    }
+
+    .dubby-description {
+      max-width: 580px;
+      margin: 20px auto;
       color: #d0d0d0;
+      font-size: .92rem;
     }
 
     .code-box {
@@ -423,99 +713,196 @@
       justify-content: center;
       align-items: center;
       gap: 14px;
-      margin: 10px 0 22px;
-      padding: 12px 14px 12px 22px;
-      border: 1px dashed rgba(255,255,255,.55);
+      margin: 14px 0 25px;
+      padding: 10px 11px 10px 20px;
+      border: 1px dashed rgba(255,255,255,.45);
       background: rgba(0,0,0,.55);
     }
 
-    .code-label {
-      color: white;
-      font-weight: 800;
+    .code-text {
+      font-weight: 900;
       letter-spacing: 2px;
     }
 
     .copy-btn {
-      padding: 10px 14px;
-      border: none;
+      padding: 12px 16px;
+      border: 0;
       background: var(--red);
       color: white;
-      font-weight: 800;
+      font-size: .74rem;
+      font-weight: 900;
       cursor: pointer;
+      transition: background .2s;
     }
 
     .copy-btn:hover {
       background: #bd071b;
     }
 
-    .dubby-note {
-      display: block;
-      margin-top: 12px;
-      color: #aaa;
-      font-size: .75rem;
+    .copy-status {
+      min-height: 22px;
+      color: #bdbdbd;
+      font-size: .78rem;
     }
 
     /* REDES */
 
-    .socials {
+    .social-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
-      margin-top: 30px;
+      margin-top: 35px;
     }
 
     .social-card {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 15px;
-      padding: 24px;
+      padding: 25px;
       border: 1px solid var(--border);
-      background: var(--panel);
-      transition: border-color .2s;
+      background: #101010;
+      transition: border-color .2s, transform .2s;
     }
 
     .social-card:hover {
+      transform: translateY(-3px);
       border-color: var(--red);
     }
 
-    .social-card strong {
-      display: block;
+    .social-card h3 {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       text-transform: uppercase;
     }
 
-    .social-card span {
+    .social-card p {
       color: var(--muted);
-      font-size: .85rem;
+      font-size: .82rem;
     }
 
     .social-arrow {
       color: var(--red);
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
 
-    /* PIE */
+    /* CTA FINAL */
+
+    .final-cta {
+      padding: 85px 0;
+      border-top: 1px solid var(--border);
+      background:
+        radial-gradient(ellipse at 50% 100%, rgba(229,9,34,.14), transparent 65%),
+        #0c0c0c;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      margin: 12px 0 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(3.2rem, 8vw, 6rem);
+      font-weight: 900;
+      line-height: .95;
+      text-transform: uppercase;
+    }
+
+    .final-cta h2 span {
+      color: var(--red);
+    }
+
+    .final-cta p {
+      max-width: 570px;
+      margin: 0 auto 26px;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
 
     footer {
-      padding: 30px 0;
+      padding: 28px 0;
       border-top: 1px solid var(--border);
-      color: var(--muted);
+      color: #858585;
+      font-size: .78rem;
       text-align: center;
-      font-size: .8rem;
     }
 
     footer strong {
       color: white;
     }
 
+    .footer-brand {
+      margin-bottom: 7px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .footer-brand span {
+      color: var(--red);
+    }
+
+    /* REPRODUCTOR */
+
+    .music-widget {
+      position: fixed;
+      z-index: 120;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: calc(100vw - 35px);
+      padding: 12px 15px;
+      border: 1px solid rgba(229,9,34,.55);
+      background: rgba(14,14,14,.96);
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+      backdrop-filter: blur(12px);
+    }
+
+    .music-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 37px;
+      height: 37px;
+      background: rgba(229,9,34,.13);
+      color: var(--red);
+      font-size: 1.1rem;
+    }
+
+    .music-info {
+      min-width: 0;
+    }
+
+    .music-info strong {
+      display: block;
+      font-size: .73rem;
+    }
+
+    .music-info span {
+      display: block;
+      color: var(--muted);
+      font-size: .65rem;
+    }
+
+    .music-button {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+      border: 0;
+      background: var(--red);
+      color: white;
+      cursor: pointer;
+      font-weight: 900;
+    }
+
     /* ANIMACIONES */
 
     .reveal {
       opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .65s ease, transform .65s ease;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
     }
 
     .reveal.visible {
@@ -524,71 +911,127 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
+      html {
+        scroll-behavior: auto;
       }
+
+      *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+
       .reveal {
         opacity: 1;
         transform: none;
       }
     }
 
-    @media (max-width: 760px) {
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
       .nav-inner {
-        padding: 15px 0;
+        padding: 14px 0;
         align-items: flex-start;
         flex-direction: column;
       }
 
       .nav-links {
         justify-content: flex-start;
-        gap: 12px 16px;
-        font-size: .72rem;
+        gap: 12px 17px;
       }
 
       .hero {
-        min-height: 570px;
+        min-height: 660px;
       }
 
-      .hero h1 {
-        font-size: clamp(3.7rem, 16vw, 6rem);
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .story-visual {
+        min-height: 350px;
+      }
+
+      .highlight-grid,
+      .values-grid,
+      .sponsor-area {
+        grid-template-columns: 1fr 1fr;
       }
 
       .section {
-        padding: 65px 0;
+        padding: 75px 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: 91%;
       }
 
-      .about-grid,
-      .feature-grid {
+      .hero {
+        min-height: 610px;
+      }
+
+      .hero h1 {
+        font-size: clamp(4rem, 18vw, 6rem);
+      }
+
+      .hero-description {
+        font-size: .9rem;
+      }
+
+      .identity-strip {
         grid-template-columns: 1fr;
-        gap: 20px;
       }
 
-      .about-panel {
-        min-height: 250px;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .stat {
+      .identity-item {
         padding: 20px;
       }
 
-      .stat + .stat {
-        border-left: none;
+      .identity-item + .identity-item {
+        border-left: 0;
         border-top: 1px solid var(--border);
       }
 
-      .socials {
+      .highlight-grid,
+      .values-grid,
+      .sponsor-area,
+      .social-grid {
         grid-template-columns: 1fr;
       }
 
+      .journey-item {
+        grid-template-columns: 48px 1fr;
+        gap: 15px;
+      }
+
+      .journey-number {
+        font-size: 1.9rem;
+      }
+
+      .music-widget {
+        right: 10px;
+        bottom: 10px;
+        padding: 9px;
+        gap: 9px;
+      }
+
+      .music-info strong {
+        font-size: .68rem;
+      }
+
+      .music-info span {
+        font-size: .6rem;
+      }
+
       .dubby-section {
-        padding: 60px 0;
+        padding: 65px 0;
+      }
+
+      .code-box {
+        gap: 10px;
+        padding: 10px;
       }
     }
   </style>
@@ -596,14 +1039,21 @@
 
 <body>
 
+  <!-- NAVEGACIÓN -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a class="brand" href="#inicio">YOUH<span>THEWOLF</span>7</a>
+      <a href="#inicio" class="brand">
+        <img src="logo wolf.jpg" alt="Logo de Youh The Wolf 7"
+             onerror="this.style.display='none'">
+        <div>YOUH <span>THE WOLF</span> 7</div>
+      </a>
 
       <nav class="nav-links" aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#competitivo">Competitivo</a>
+        <a href="#historia">Mi historia</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#sponsors">Sponsors</a>
         <a href="#dubby">Dubby</a>
         <a href="#redes">Redes</a>
       </nav>
@@ -611,116 +1061,281 @@
   </header>
 
   <main>
+
     <!-- PORTADA -->
     <section class="hero" id="inicio">
+      <img
+        class="hero-bg"
+        src="fondo wolf.jpg"
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+      >
+
       <div class="container hero-content">
-        <span class="hero-kicker">Call of Duty · Gaming · Competitivo</span>
+        <div class="hero-tag">Official Gaming Website</div>
 
         <h1>
           YOUH THE
           <span>WOLF 7</span>
         </h1>
 
-        <p class="hero-text">
+        <p class="hero-description">
           Bienvenido a mi territorio. Soy Youh The Wolf 7, jugador de
-          Call of Duty, apasionado por la competición, la mejora constante
-          y cada desafío que aparece en el camino.
+          Call of Duty y creador de contenido. La pasión por competir,
+          la mentalidad de superación y las ganas de llevar mi juego
+          al siguiente nivel son parte de mi camino.
         </p>
 
-        <div class="buttons">
-          <a class="btn btn-primary" href="#competitivo">Conocé mi juego ↗</a>
-          <a class="btn btn-outline" href="#dubby">Mi código Dubby</a>
+        <div class="hero-buttons">
+          <a href="#historia" class="btn btn-red">Conocé mi historia ↗</a>
+          <a href="#dubby" class="btn btn-outline">Mi código Dubby</a>
+        </div>
+
+        <div class="hero-bottom">
+          <span class="line"></span>
+          <span>Instinto · Disciplina · Competición</span>
         </div>
       </div>
     </section>
 
-    <!-- ESTADÍSTICAS -->
-    <section class="stats" aria-label="Estadísticas del jugador">
-      <div class="stat">
-        <strong>32 <span class="red">KILLS</span></strong>
-        <span>Récord personal en Resurgimiento</span>
-      </div>
-
-      <div class="stat">
+    <!-- IDENTIDAD -->
+    <section class="identity-strip">
+      <div class="identity-item">
         <strong>CALL OF DUTY</strong>
         <span>Mi campo de batalla</span>
       </div>
-
-      <div class="stat">
+      <div class="identity-item">
+        <strong>MENTALIDAD <span class="red">COMPETITIVA</span></strong>
+        <span>Mejora constante</span>
+      </div>
+      <div class="identity-item">
         <strong>WOLF <span class="red">7</span></strong>
-        <span>Una identidad, un objetivo</span>
+        <span>Una identidad propia</span>
       </div>
     </section>
 
-    <!-- SOBRE MÍ -->
-    <section class="section" id="sobre-mi">
-      <div class="container about-grid">
-        <div class="about-panel reveal">
-          <div class="wolf-mark">W7</div>
-          <h2 class="section-title">EL INSTINTO<br>DEL LOBO.</h2>
-          <p>En cada partida hay una oportunidad para superarse.</p>
+    <!-- HISTORIA -->
+    <section class="section" id="historia">
+      <div class="container story-grid">
+        <div class="story-visual reveal">
+          <img
+            src="logo wolf.jpg"
+            alt="Identidad de Youh The Wolf 7"
+            onerror="this.style.display='none'"
+          >
+          <div class="story-stamp">THE WOLF 7 · COD</div>
         </div>
 
-        <div class="about-copy reveal">
-          <span class="eyebrow">Detrás del jugador</span>
-          <h2 class="section-title">MÁS QUE<br>UNA PARTIDA.</h2>
+        <div class="story-copy reveal">
+          <span class="eyebrow">Detrás del nombre</span>
+          <h2 class="section-title">
+            NO ES SOLO<br>
+            <span>UN JUEGO.</span>
+          </h2>
 
           <p>
-            Call of Duty es mucho más que un juego para mí. Es estrategia,
-            reflejos, decisiones rápidas y la búsqueda constante de mejorar.
+            Call of Duty es el lugar donde pongo a prueba mis reflejos,
+            mi capacidad para tomar decisiones y mi manera de enfrentar
+            cada desafío.
           </p>
 
           <p>
-            Disfruto especialmente el ritmo intenso de Resurgimiento y
-            el desafío de las partidas competitivas. Cada partida deja
-            una experiencia y una oportunidad para seguir creciendo.
+            Me gusta la intensidad de Resurgimiento, el desafío de Ranked
+            y esa sensación de que cada partida ofrece una nueva oportunidad
+            para aprender y mejorar.
           </p>
 
           <p>
-            Este espacio reúne mi identidad gamer, mis contenidos,
-            mis redes y las marcas que me acompañan.
+            Este proyecto representa mi identidad dentro del gaming:
+            una combinación de pasión, dedicación y ganas de compartir
+            el recorrido con quienes disfrutan de este mundo tanto como yo.
           </p>
+
+          <p>
+            Esto recién continúa. Cada partida forma parte de una historia
+            que todavía se está escribiendo.
+          </p>
+
+          <span class="story-signature">Welcome to the Wolf's Den.</span>
         </div>
       </div>
     </section>
 
-    <!-- COMPETITIVO -->
-    <section class="section competitive" id="competitivo">
+    <!-- TRAYECTORIA -->
+    <section class="section section-dark" id="trayectoria">
       <div class="container">
-        <span class="eyebrow">Mi zona de combate</span>
-        <h2 class="section-title">MENTALIDAD <span class="red">COMPETITIVA.</span></h2>
-        <p class="section-description">
-          No se trata solamente de conseguir eliminaciones.
-          Se trata de tomar mejores decisiones, adaptarse y seguir avanzando.
-        </p>
+        <div class="section-heading reveal">
+          <span class="eyebrow">El camino continúa</span>
+          <h2 class="section-title">
+            MI <span>TRAYECTORIA.</span>
+          </h2>
+          <p class="section-intro">
+            Cada etapa aporta experiencia. El objetivo es seguir evolucionando
+            como jugador y construir una presencia propia dentro de la comunidad.
+          </p>
+        </div>
 
-        <div class="feature-grid">
-          <article class="feature reveal">
-            <div class="feature-number">01</div>
-            <h3>Resurgimiento</h3>
+        <div class="journey-list">
+          <article class="journey-item reveal">
+            <div class="journey-number">01</div>
+            <div>
+              <h3>Pasión por Call of Duty</h3>
+              <p>
+                El gusto por la acción, la estrategia y los enfrentamientos
+                que convierten cada partida en un nuevo desafío.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-item reveal">
+            <div class="journey-number">02</div>
+            <div>
+              <h3>La mentalidad competitiva</h3>
+              <p>
+                Buscar mejores decisiones, aprender de las partidas difíciles
+                y trabajar en el propio nivel sin dejar de disfrutar el juego.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-item reveal">
+            <div class="journey-number">03</div>
+            <div>
+              <h3>Compartir el juego</h3>
+              <p>
+                Abrir las puertas a los directos, los clips, las jugadas
+                destacadas y los momentos que hacen especial cada partida.
+              </p>
+            </div>
+          </article>
+
+          <article class="journey-item reveal">
+            <div class="journey-number">04</div>
+            <div>
+              <h3>Construir una comunidad</h3>
+              <p>
+                Seguir creciendo, conectar con otros jugadores y convertir
+                esta pasión en un proyecto con identidad propia.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="section" id="highlights">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Dentro del juego</span>
+          <h2 class="section-title">
+            MOMENTOS <span>DESTACADOS.</span>
+          </h2>
+          <p class="section-intro">
+            El campo de batalla siempre tiene una historia para contar.
+            Esta sección está preparada para tus mejores clips y jugadas.
+          </p>
+        </div>
+
+        <div class="highlight-grid">
+          <article class="highlight-card reveal">
+            <span class="highlight-index">01</span>
+            <span class="eyebrow">Resurgimiento</span>
+            <h3>Intensidad total</h3>
+            <p>Partidas rápidas, presión constante y decisiones en segundos.</p>
+          </article>
+
+          <article class="highlight-card reveal">
+            <span class="highlight-index">02</span>
+            <span class="eyebrow">Ranked</span>
+            <h3>En busca del siguiente nivel</h3>
+            <p>Competir, adaptarse y seguir mejorando con cada desafío.</p>
+          </article>
+
+          <article class="highlight-card reveal">
+            <span class="highlight-index">03</span>
+            <span class="eyebrow">Contenido</span>
+            <h3>Jugadas para recordar</h3>
+            <p>Un espacio para compartir clips, momentos y grandes partidas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILOSOFÍA -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">La mentalidad Wolf</span>
+          <h2 class="section-title">
+            SIEMPRE <span>HACIA ADELANTE.</span>
+          </h2>
+          <p class="section-intro">
+            El progreso no aparece de un día para el otro.
+            Se construye jugando, aprendiendo y volviendo a intentarlo.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <div class="value-icon">↗</div>
+            <h3>Superación</h3>
             <p>
-              Acción constante, enfrentamientos intensos y la búsqueda
-              de superar mis propios límites.
+              Buscar nuevas formas de mejorar y convertir cada experiencia
+              en una oportunidad de crecimiento.
             </p>
           </article>
 
-          <article class="feature reveal">
-            <div class="feature-number">02</div>
-            <h3>Ranked</h3>
+          <article class="value-card reveal">
+            <div class="value-icon">◆</div>
+            <h3>Constancia</h3>
             <p>
-              Competir, aprender de cada partida y trabajar para
-              llevar mi nivel al siguiente escalón.
+              Mantener el compromiso con el juego y seguir construyendo
+              el camino incluso cuando las partidas se complican.
             </p>
           </article>
 
-          <article class="feature reveal">
-            <div class="feature-number">03</div>
-            <h3>Creación de contenido</h3>
+          <article class="value-card reveal">
+            <div class="value-icon">W</div>
+            <h3>Identidad</h3>
             <p>
-              Compartir partidas, jugadas destacadas y momentos
-              que representan mi camino dentro del gaming.
+              Representar el nombre Wolf 7 con una personalidad propia
+              y una comunidad que comparta la pasión por el gaming.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section class="section" id="sponsors">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Marcas y colaboraciones</span>
+          <h2 class="section-title">
+            PARTNERS <span>& SPONSORS.</span>
+          </h2>
+          <p class="section-intro">
+            Las marcas que forman parte de la identidad visual de este proyecto.
+          </p>
+        </div>
+
+        <div class="sponsor-area">
+          <div class="sponsor-card reveal">
+            <div class="sponsor-name monster">MONSTER</div>
+            <small>Energy</small>
+          </div>
+
+          <div class="sponsor-card reveal">
+            <div class="sponsor-name redragon">REDRAGON</div>
+            <small>Gaming gear</small>
+          </div>
+
+          <a class="sponsor-card reveal" href="#dubby">
+            <div class="sponsor-name dubby">DUBBY</div>
+            <small>Mi código de creador ↓</small>
+          </a>
         </div>
       </div>
     </section>
@@ -728,13 +1343,9 @@
     <!-- DUBBY -->
     <section class="dubby-section" id="dubby">
       <div class="container">
-        <div class="dubby-card reveal">
+        <div class="dubby-banner reveal">
 
-          <!--
-            IMPORTANTE:
-            Subí tu video a la raíz del repositorio y llamalo
-            dubby-banner.mp4, o cambiá esta ruta por su nombre real.
-          -->
+          <!-- El video debe llamarse dubby-banner.mp4 y estar en la raíz -->
           <video
             class="dubby-video"
             autoplay
@@ -747,58 +1358,63 @@
             <source src="dubby-banner.mp4" type="video/mp4">
           </video>
 
-          <div class="dubby-overlay"></div>
-
           <div class="dubby-content">
-            <span class="eyebrow">Mi patrocinador</span>
+            <span class="eyebrow">Support your creator</span>
 
-            <h2>LEVEL UP<br>WITH <span class="red">DUBBY.</span></h2>
+            <h2 class="dubby-title">
+              FUEL YOUR<br>
+              <span>GAME.</span>
+            </h2>
 
-            <div class="discount">10% DE DESCUENTO</div>
+            <div class="dubby-discount">10% OFF</div>
 
-            <p>
-              Aprovechá tu descuento utilizando mi código de creador
-              al realizar tu compra en Dubby.
+            <p class="dubby-description">
+              Apoyá mi contenido y aprovechá el descuento utilizando
+              mi código de creador al comprar en Dubby.
             </p>
 
             <div class="code-box">
-              <span class="code-label" id="creator-code">Youhtehwolf7</span>
+              <span class="code-text" id="creator-code">Youhthewolf7</span>
               <button class="copy-btn" id="copy-code" type="button">
                 COPIAR CÓDIGO
               </button>
             </div>
 
+            <p class="copy-status" id="copy-status" aria-live="polite">
+              Tu código de creador: Youhthewolf7
+            </p>
+
             <br>
 
             <a
-              class="btn btn-primary"
+              class="btn btn-red"
               href="https://www.dubby.gg/"
               target="_blank"
               rel="noopener noreferrer"
             >
               VISITAR DUBBY ↗
             </a>
-
-            <span class="dubby-note" id="copy-message" aria-live="polite">
-              Código de creador: Youhtehwolf7
-            </span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- REDES -->
-    <section class="section" id="redes">
+    <section class="section section-dark" id="redes">
       <div class="container">
-        <span class="eyebrow">Conectá conmigo</span>
-        <h2 class="section-title">SEGUÍ EL <span class="red">CAMINO.</span></h2>
-        <p class="section-description">
-          Acompañame en mis redes para ver contenido, partidas y
-          novedades de mi recorrido en Call of Duty.
-        </p>
+        <div class="section-heading reveal">
+          <span class="eyebrow">La comunidad</span>
+          <h2 class="section-title">
+            SEGUÍ EL <span>CAMINO.</span>
+          </h2>
+          <p class="section-intro">
+            Conectá conmigo y acompañame en las próximas partidas,
+            directos y novedades.
+          </p>
+        </div>
 
-        <div class="socials">
-          <!-- Reemplazá los enlaces por las URL exactas de tus perfiles -->
+        <div class="social-grid">
+          <!-- Cambiá estos enlaces por los de tus perfiles reales -->
           <a
             class="social-card reveal"
             href="https://www.twitch.tv/"
@@ -806,8 +1422,8 @@
             rel="noopener noreferrer"
           >
             <div>
-              <strong>Twitch</strong>
-              <span>Directos y partidas en vivo</span>
+              <h3>Twitch</h3>
+              <p>Directos y partidas en vivo</p>
             </div>
             <span class="social-arrow">↗</span>
           </a>
@@ -819,41 +1435,96 @@
             rel="noopener noreferrer"
           >
             <div>
-              <strong>Instagram</strong>
-              <span>Contenido y novedades</span>
+              <h3>Instagram</h3>
+              <p>Contenido y novedades</p>
             </div>
             <span class="social-arrow">↗</span>
           </a>
         </div>
       </div>
     </section>
+
+    <!-- CIERRE -->
+    <section class="final-cta">
+      <div class="container reveal">
+        <span class="eyebrow">This is only the beginning</span>
+        <h2>EL CAMINO<br><span>CONTINÚA.</span></h2>
+        <p>
+          Cada partida es una nueva historia. Gracias por formar parte
+          de este recorrido.
+        </p>
+        <a href="#inicio" class="btn btn-red">Volver al inicio ↑</a>
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p><strong>YOUH THE WOLF 7</strong> · Call of Duty · Gaming</p>
-      <p>© <span id="year"></span> Todos los derechos reservados.</p>
+      <div class="footer-brand">YOUH <span>THE WOLF</span> 7</div>
+      <p>Call of Duty · Gaming · Competitive Mindset</p>
+      <p>© <span id="year"></span> Youh The Wolf 7. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <script>
-    // Año automático
-    document.getElementById("year").textContent = new Date().getFullYear();
+  <!-- REPRODUCTOR DE MÚSICA -->
+  <div class="music-widget">
+    <div class="music-icon">♫</div>
 
-    // Copiar el código de Dubby
+    <div class="music-info">
+      <strong>WOLF SOUNDTRACK</strong>
+      <span id="music-status">Música en pausa</span>
+    </div>
+
+    <button
+      class="music-button"
+      id="music-toggle"
+      type="button"
+      aria-label="Reproducir música"
+      aria-pressed="false"
+    >▶</button>
+
+    <audio id="background-music" loop preload="none">
+      <source src="DDark - Shootin Stars [NCS Release].mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    // Año del footer
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Botón para copiar el código de Dubby
     const copyButton = document.getElementById("copy-code");
     const creatorCode = document.getElementById("creator-code");
-    const copyMessage = document.getElementById("copy-message");
+    const copyStatus = document.getElementById("copy-status");
 
     copyButton.addEventListener("click", async () => {
       const code = creatorCode.textContent.trim();
 
       try {
-        await navigator.clipboard.writeText(code);
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(code);
+        } else {
+          const field = document.createElement("textarea");
+          field.value = code;
+          field.style.position = "fixed";
+          field.style.opacity = "0";
+          document.body.appendChild(field);
+          field.select();
+
+          const copied = document.execCommand("copy");
+          field.remove();
+
+          if (!copied) throw new Error("No se pudo copiar");
+        }
+
         copyButton.textContent = "¡COPIADO!";
-        copyMessage.textContent = "Código copiado: " + code;
+        copyStatus.textContent = "Código copiado: " + code;
       } catch (error) {
-        copyMessage.textContent = "Copiá este código manualmente: " + code;
+        copyStatus.textContent =
+          "Copiá manualmente este código: " + code;
       }
 
       setTimeout(() => {
@@ -861,22 +1532,47 @@
       }, 2200);
     });
 
-    // Animaciones al aparecer las secciones
-    const revealElements = document.querySelectorAll(".reveal");
+    // Reproductor: empieza solo cuando el visitante pulsa el botón
+    const music = document.getElementById("background-music");
+    const musicButton = document.getElementById("music-toggle");
+    const musicStatus = document.getElementById("music-status");
+
+    musicButton.addEventListener("click", async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicButton.textContent = "Ⅱ";
+          musicButton.setAttribute("aria-label", "Pausar música");
+          musicButton.setAttribute("aria-pressed", "true");
+          musicStatus.textContent = "Reproduciendo";
+        } catch (error) {
+          musicStatus.textContent = "No se pudo cargar el audio";
+        }
+      } else {
+        music.pause();
+        musicButton.textContent = "▶";
+        musicButton.setAttribute("aria-label", "Reproducir música");
+        musicButton.setAttribute("aria-pressed", "false");
+        musicStatus.textContent = "Música en pausa";
+      }
+    });
+
+    // Animaciones de entrada
+    const revealItems = document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
+      const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
+            revealObserver.unobserve(entry.target);
           }
         });
       }, { threshold: 0.12 });
 
-      revealElements.forEach((element) => observer.observe(element));
+      revealItems.forEach((item) => revealObserver.observe(item));
     } else {
-      revealElements.forEach((element) => element.classList.add("visible"));
+      revealItems.forEach((item) => item.classList.add("visible"));
     }
   </script>
 
